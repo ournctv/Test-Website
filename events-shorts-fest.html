@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nantucket Shorts Fest — NCTV</title>
+<meta name="description" content="Nantucket Community Television — Vision. Voice. Life. Broadcasting Nantucket on Channels 8 | 1072.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,560;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;650;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=340">
+</head>
+<body data-page="events-shorts-fest.html">
+
+<!-- broadcast status strip -->
+<div class="status-strip">
+  <div class="wrap">
+    <span class="live">On Air</span>
+    <span class="sep">/</span>
+    <span>Nantucket, MA</span>
+    <span class="sep">/</span>
+    <span>TV Channels: Civic 8 &amp; HD 1072</span>
+    <span class="roll">Vision. Voice. Life.</span>
+  </div>
+</div>
+
+<!-- navigation (built by site.js) -->
+<header id="site-nav"></header>
+
+<section class="vhero vhero--bare">
+  <div class="hero__media">
+    <img class="hero__fallback" src="assets/nsf-backdrop-dark.webp" alt="Nantucket Shorts Fest">
+    <div class="hero__video" aria-hidden="true"><div id="heroVideo"></div></div>
+  </div>
+  <div class="hero__shield" aria-hidden="true"></div>
+
+</section>
+  <script>
+  (function(){
+    var HERO_VIDEO_ID = "y7aC9j1vS-w";
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion:reduce)").matches) return;
+    var wrap = document.querySelector(".hero__video");
+    var media = document.querySelector(".hero__media");
+    if (!wrap || !document.getElementById("heroVideo")) return;
+    var started = false;
+    function show(){ if (media) media.classList.add("is-playing"); }
+    function hide(){ if (media) media.classList.remove("is-playing"); }
+    function init(){
+      new YT.Player("heroVideo", {
+        videoId: HERO_VIDEO_ID,
+        playerVars: {
+          autoplay:1, mute:1, controls:0, iv_load_policy:3,
+          modestbranding:1, rel:0, playsinline:1, disablekb:1, fs:0,
+          origin: location.origin
+        },
+        events: {
+          onReady: function(e){ e.target.mute(); e.target.playVideo();
+            setTimeout(function(){ try{ e.target.playVideo(); }catch(_){} }, 400);
+            setInterval(function(){ try{ var d=e.target.getDuration(); if(d>1 && e.target.getCurrentTime()>=d-0.4){ e.target.seekTo(0,true); } }catch(_){} }, 250); },
+          onStateChange: function(e){
+            if (e.data === YT.PlayerState.PLAYING) { if (!started) { started = true; setTimeout(show, 700); } }
+            else if (e.data === YT.PlayerState.PAUSED) { hide(); }
+            else if (e.data === YT.PlayerState.ENDED) { try{ e.target.seekTo(0,true); e.target.playVideo(); }catch(_){} }
+          },
+          onError: function(){ hide(); }
+        }
+      });
+    }
+    if (window.YT && window.YT.Player) {
+      init();
+    } else {
+      var prev = window.onYouTubeIframeAPIReady;
+      window.onYouTubeIframeAPIReady = function(){ if (typeof prev === "function") prev(); init(); };
+      if (!document.getElementById("yt-iframe-api")) {
+        var tag = document.createElement("script");
+        tag.id = "yt-iframe-api";
+        tag.src = "https://www.youtube.com/iframe_api";
+        document.head.appendChild(tag);
+      }
+    }
+    setTimeout(function(){ if (!started) hide(); }, 8000);
+  })();
+  </script>
+<section class="section shorts-intro">
+  <div class="wrap shorts-intro__grid" data-reveal>
+    <img class="shorts-intro__logo" src="assets/shorts-fest.webp" alt="Nantucket Shorts Fest">
+    <p class="shorts-intro__text"><span class="shorts-intro__lead">Short films inspired by Nantucket since 2013.</span><br>The Nantucket Shorts Festival celebrates short-form movies that are 2 to 10 minutes long, inspired by the island of Nantucket. Its unique format allows both experienced and amateur filmmakers to present their art on the big screen at the Dreamland Theater in an entertaining evening unlike any other. A jury screens each submitted film and selects the top films to appear at this festival.</p>
+  </div>
+</section>
+<section class="section shorts-encore">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow"><span class="dot"></span>Encore Screenings</span>
+    </div>
+    <a class="encore-img-link" href="https://nantucketcommunitytelevision.vhx.tv/products/2026-nantucket-shorts-fest" target="_blank" rel="noopener"
+       aria-label="Watch the 2026 Nantucket Shorts Festival">
+      <img class="encore-img" src="assets/encore-2026.webp?v=340" alt="The 2026 Nantucket Shorts Festival, a signature event by NCTV">
+    </a>
+    <h2 class="encore-cta" data-reveal>To watch, <a class="encore-link" href="https://nantucketcommunitytelevision.vhx.tv/products/2026-nantucket-shorts-fest" target="_blank" rel="noopener">click here</a>.</h2>
+  </div>
+</section>
+<section class="section shorts-submit">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow"><span class="dot"></span>Guidelines</span>
+      <h2>How to Submit to the 2027 Shorts Fest</h2>
+    </div>
+    <div class="criteria" data-reveal>
+      <h3>Film Submission Criteria at a Glance:</h3>
+      <ul class="criteria__list">
+        <li>Films must be created on or inspired by the island of Nantucket.</li>
+        <li>Film length: 2-10 minutes.</li>
+        <li>Films cannot be a commercial for a local business.</li>
+        <li>Films must have a beginning, middle, and an end.</li>
+        <li>Submission fee is $50. Student &amp; first-time filmmakers: $35.</li>
+        <li>Top films will be selected by a jury and shown at the Dreamland Theater.</li>
+        <li>All music must have music rights and be appropriately cleared.</li>
+        <li>Submission format: 1080p /24p/ h.264</li>
+        <li>Films may be posted online to a pay-per-view link as part of a fundraiser benefitting NCTV. This link will be active for no greater than 1 year.</li>
+        <li>Films may be shown a few times at the Dreamland during &ldquo;encore&rdquo; presentations of the Shorts Fest.</li>
+        <li>All films will be shown on NCTV Channel 8 &amp; 1072.</li>
+        <li>All films will be shown on NCTV's YouTube Channel.</li>
+        <li>Submissions are due by 5pm on 9/10/27.</li>
+        <li>Questions? Email the Shorts Fest Director Lisa Getter at <a href="mailto:lisa@ournctv.org">lisa@ournctv.org</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="section shorts-awards">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow"><span class="dot"></span>Awards</span>
+      <h2>Congratulations to our Shorts Fest winners!</h2>
+    </div>
+    <div class="yearpick" data-reveal>
+      <div class="yearpick__btns" role="group" aria-label="Shorts Fest winners by year">
+        <button type="button" class="year-btn" data-year="2023" aria-pressed="false">2023</button>
+        <button type="button" class="year-btn" data-year="2024" aria-pressed="false">2024</button>
+        <button type="button" class="year-btn" data-year="2025" aria-pressed="false">2025</button>
+        <button type="button" class="year-btn is-active" data-year="2026" aria-pressed="true">2026</button>
+      </div>
+      <div class="yearpick__panels">
+        <div class="year-panel" data-year="2023" hidden>
+          <div class="awards-grid">
+          <figure class="award">
+            <figcaption class="award__cap"><span class="award__label"><svg class="award__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4.6a1.4 1.4 0 0 0 1.6 2.8"/><path d="M17 6h2.4a1.4 1.4 0 0 1-1.6 2.8"/><path d="M12 14v3"/><path d="M9 20h6"/><path d="M9.6 20 10 17"/><path d="M14.4 20 14 17"/></svg>Best New Filmmaker Award:</span><br>Contemplating by Vivian Crosby</figcaption>
+            <img src="assets/contemplating.webp?v=340" alt="Contemplating by Vivian Crosby" loading="lazy">
+          </figure>
+          <figure class="award">
+            <figcaption class="award__cap"><span class="award__label"><svg class="award__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="6" r="3"/><circle cx="13" cy="6" r="2.5"/><rect x="3" y="10" width="12.5" height="9" rx="1.6"/><path d="M15.5 12.8 21 10.3v8.4l-5.5-2.5z"/></svg>Audience Choice Award:</span><br>Lost in Nevers Land by Penny Dey</figcaption>
+            <img src="assets/lost-in-nevers-land.webp?v=340" alt="Lost in Nevers Land by Penny Dey" loading="lazy">
+          </figure>
+          </div>
+        </div>
+        <div class="year-panel" data-year="2024" hidden>
+          <div class="awards-grid">
+          <figure class="award">
+            <figcaption class="award__cap"><span class="award__label"><svg class="award__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4.6a1.4 1.4 0 0 0 1.6 2.8"/><path d="M17 6h2.4a1.4 1.4 0 0 1-1.6 2.8"/><path d="M12 14v3"/><path d="M9 20h6"/><path d="M9.6 20 10 17"/><path d="M14.4 20 14 17"/></svg>Best New Filmmaker Award:</span><br>Nantucket Cribz by John Eboli</figcaption>
+            <img src="assets/nantucket-cribz.webp?v=340" alt="Nantucket Cribz by John Eboli" loading="lazy">
+          </figure>
+          <figure class="award">
+            <figcaption class="award__cap"><span class="award__label"><svg class="award__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="6" r="3"/><circle cx="13" cy="6" r="2.5"/><rect x="3" y="10" width="12.5" height="9" rx="1.6"/><path d="M15.5 12.8 21 10.3v8.4l-5.5-2.5z"/></svg>Audience Choice Award:</span><br>Azure Odyssey by Oscar Waldman &amp; Sam Billings</figcaption>
+            <img src="assets/azure-odyssey.webp?v=340" alt="Azure Odyssey by Oscar Waldman &amp; Sam Billings" loading="lazy">
+          </figure>
+          </div>
+        </div>
+        <div class="year-panel" data-year="2025" hidden>
+          <div class="awards-grid">
+          <figure class="award">
+            <figcaption class="award__cap"><span class="award__label"><svg class="award__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4.6a1.4 1.4 0 0 0 1.6 2.8"/><path d="M17 6h2.4a1.4 1.4 0 0 1-1.6 2.8"/><path d="M12 14v3"/><path d="M9 20h6"/><path d="M9.6 20 10 17"/><path d="M14.4 20 14 17"/></svg>Best New Filmmaker Award:</span><br>The Meeting Place by Charity Grace Mofsen</figcaption>
+            <img src="assets/the-meeting-place.webp?v=340" alt="The Meeting Place by Charity Grace Mofsen" loading="lazy">
+          </figure>
+          <figure class="award">
+            <figcaption class="award__cap"><span class="award__label"><svg class="award__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="6" r="3"/><circle cx="13" cy="6" r="2.5"/><rect x="3" y="10" width="12.5" height="9" rx="1.6"/><path d="M15.5 12.8 21 10.3v8.4l-5.5-2.5z"/></svg>Audience Choice Award:</span><br>Two Nights for a Quarter by Penny Dey</figcaption>
+            <img src="assets/two-nights-for-a-quarter.webp?v=340" alt="Two Nights for a Quarter by Penny Dey" loading="lazy">
+          </figure>
+          </div>
+        </div>
+        <div class="year-panel" data-year="2026">
+          <div class="awards-grid">
+          <figure class="award">
+            <figcaption class="award__cap"><span class="award__label"><svg class="award__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4.6a1.4 1.4 0 0 0 1.6 2.8"/><path d="M17 6h2.4a1.4 1.4 0 0 1-1.6 2.8"/><path d="M12 14v3"/><path d="M9 20h6"/><path d="M9.6 20 10 17"/><path d="M14.4 20 14 17"/></svg>Best New Filmmaker Award:</span><br>Something Else by Kate Hamilton Pardee</figcaption>
+            <img src="assets/something-else.webp?v=340" alt="Something Else by Kate Hamilton Pardee">
+          </figure>
+          <figure class="award">
+            <figcaption class="award__cap"><span class="award__label"><svg class="award__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="6" r="3"/><circle cx="13" cy="6" r="2.5"/><rect x="3" y="10" width="12.5" height="9" rx="1.6"/><path d="M15.5 12.8 21 10.3v8.4l-5.5-2.5z"/></svg>Audience Choice Award:</span><br>The One Star Weekend by Mark Kiefer</figcaption>
+            <img src="assets/the-one-star-weekend.webp?v=340" alt="The One Star Weekend by Mark Kiefer">
+          </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section shorts-photos">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow"><span class="dot"></span>Festival Photos</span>
+    </div>
+    <div class="dl-group dl-group--static" data-reveal>
+      <h2 class="dl-group__title">Select a Year to See Photos from that Festival</h2>
+      <div class="dl-group__body">
+        <div class="yearpick yearpick--toggle">
+          <div class="yearpick__btns" role="group" aria-label="Festival photos by year">
+          <button type="button" class="year-btn" disabled title="Photos from the 2023 festival are not online yet">2023</button>
+          <button type="button" class="year-btn" disabled title="Photos from the 2024 festival are not online yet">2024</button>
+          <button type="button" class="year-btn" disabled title="Photos from the 2025 festival are not online yet">2025</button>
+          <button type="button" class="year-btn" data-year="2026" aria-pressed="false">2026</button>
+          </div>
+          <div class="yearpick__panels">
+          <div class="year-panel" data-year="2026" hidden>
+            <p class="photo-credit">Photos by Charity Grace Photography. For prints, <a href="https://www.charitygracephotography.com/" target="_blank" rel="noopener">click here</a>.</p>
+            <div class="photo-grid">
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-01-lg.webp?v=340">
+                <img src="assets/nsf2026-01.webp?v=340" alt="Programs for the 2026 Nantucket Shorts Festival fanned out on a table" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-02-lg.webp?v=340">
+                <img src="assets/nsf2026-02.webp?v=340" alt="Two festival-goers on the red carpet, one holding a Dreamland ticket" width="700" height="875" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-03-lg.webp?v=340">
+                <img src="assets/nsf2026-03.webp?v=340" alt="Three festival-goers together on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-04-lg.webp?v=340">
+                <img src="assets/nsf2026-04.webp?v=340" alt="A festival-goer on the red carpet in a patterned jacket" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-05-lg.webp?v=340">
+                <img src="assets/nsf2026-05.webp?v=340" alt="Two festival-goers side by side on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-06-lg.webp?v=340">
+                <img src="assets/nsf2026-06.webp?v=340" alt="Two festival-goers on the red carpet" width="700" height="875" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-07-lg.webp?v=340">
+                <img src="assets/nsf2026-07.webp?v=340" alt="Two festival-goers laughing together on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-08-lg.webp?v=340">
+                <img src="assets/nsf2026-08.webp?v=340" alt="Two festival-goers arm in arm on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-09-lg.webp?v=340">
+                <img src="assets/nsf2026-09.webp?v=340" alt="Four festival-goers together on the red carpet" width="700" height="875" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-10-lg.webp?v=340">
+                <img src="assets/nsf2026-10.webp?v=340" alt="Two festival-goers on the red carpet holding tubs of popcorn" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-11-lg.webp?v=340">
+                <img src="assets/nsf2026-11.webp?v=340" alt="Two festival-goers on the red carpet, one holding a ticket" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-12-lg.webp?v=340">
+                <img src="assets/nsf2026-12.webp?v=340" alt="Two festival-goers on the red carpet, one holding popcorn" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-13-lg.webp?v=340">
+                <img src="assets/nsf2026-13.webp?v=340" alt="Two festival-goers on the red carpet with a tub of popcorn" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-14-lg.webp?v=340">
+                <img src="assets/nsf2026-14.webp?v=340" alt="Two festival-goers on the red carpet, one holding a program" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-15-lg.webp?v=340">
+                <img src="assets/nsf2026-15.webp?v=340" alt="Two festival-goers side by side on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-16-lg.webp?v=340">
+                <img src="assets/nsf2026-16.webp?v=340" alt="Two festival-goers with an arm around each other on the red carpet" width="700" height="875" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-17-lg.webp?v=340">
+                <img src="assets/nsf2026-17.webp?v=340" alt="A festival-goer holding a handful of small colorful puppets" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-18-lg.webp?v=340">
+                <img src="assets/nsf2026-18.webp?v=340" alt="A festival-goer laughing while holding small colorful puppets" width="700" height="875" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-19-lg.webp?v=340">
+                <img src="assets/nsf2026-19.webp?v=340" alt="A festival-goer on the red carpet in a wool coat" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-20-lg.webp?v=340">
+                <img src="assets/nsf2026-20.webp?v=340" alt="Two festival-goers together on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-21-lg.webp?v=340">
+                <img src="assets/nsf2026-21.webp?v=340" alt="Two people on stage in the darkened theater, one holding a microphone" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-22-lg.webp?v=340">
+                <img src="assets/nsf2026-22.webp?v=340" alt="Two people on stage passing a microphone to the audience" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-23-lg.webp?v=340">
+                <img src="assets/nsf2026-23.webp?v=340" alt="A speaker with a microphone, shown on the big screen above the audience" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-24-lg.webp?v=340">
+                <img src="assets/nsf2026-24.webp?v=340" alt="Two speakers on screen during a question and answer session" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-25-lg.webp?v=340">
+                <img src="assets/nsf2026-25.webp?v=340" alt="Two people speaking to the audience, one holding a microphone" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-26-lg.webp?v=340">
+                <img src="assets/nsf2026-26.webp?v=340" alt="A speaker answering questions, shown on the screen above the stage" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-27-lg.webp?v=340">
+                <img src="assets/nsf2026-27.webp?v=340" alt="A speaker in a spotlight addressing the darkened theater" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-28-lg.webp?v=340">
+                <img src="assets/nsf2026-28.webp?v=340" alt="A speaker with a microphone shown on the big screen" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-29-lg.webp?v=340">
+                <img src="assets/nsf2026-29.webp?v=340" alt="A speaker with a microphone shown on screen above the audience" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-30-lg.webp?v=340">
+                <img src="assets/nsf2026-30.webp?v=340" alt="An award winner raising a trophy and certificate on stage" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-31-lg.webp?v=340">
+                <img src="assets/nsf2026-31.webp?v=340" alt="Five people on stage as the Audience Award is announced" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-32-lg.webp?v=340">
+                <img src="assets/nsf2026-32.webp?v=340" alt="A festival-goer on the red carpet in a leather jacket and patterned scarf" width="700" height="875" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-33-lg.webp?v=340">
+                <img src="assets/nsf2026-33.webp?v=340" alt="Four festival-goers together on the red carpet" width="700" height="875" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-34-lg.webp?v=340">
+                <img src="assets/nsf2026-34.webp?v=340" alt="Two festival-goers side by side on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-35-lg.webp?v=340">
+                <img src="assets/nsf2026-35.webp?v=340" alt="A festival-goer on the red carpet with a tub of popcorn" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-36-lg.webp?v=340">
+                <img src="assets/nsf2026-36.webp?v=340" alt="A festival-goer on the red carpet in a quilted vest" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-37-lg.webp?v=340">
+                <img src="assets/nsf2026-37.webp?v=340" alt="A festival-goer smiling on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-38-lg.webp?v=340">
+                <img src="assets/nsf2026-38.webp?v=340" alt="A festival-goer gesturing to the camera on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-39-lg.webp?v=340">
+                <img src="assets/nsf2026-39.webp?v=340" alt="Three festival-goers arm in arm on the red carpet" width="700" height="875" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-40-lg.webp?v=340">
+                <img src="assets/nsf2026-40.webp?v=340" alt="Two festival-goers together on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-41-lg.webp?v=340">
+                <img src="assets/nsf2026-41.webp?v=340" alt="Four festival-goers together on the red carpet" width="700" height="875" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-42-lg.webp?v=340">
+                <img src="assets/nsf2026-42.webp?v=340" alt="Four festival-goers on the red carpet, one holding a program" width="700" height="875" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-43-lg.webp?v=340">
+                <img src="assets/nsf2026-43.webp?v=340" alt="Four festival-goers on the red carpet with a festival program" width="700" height="875" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-44-lg.webp?v=340">
+                <img src="assets/nsf2026-44.webp?v=340" alt="Two festival-goers side by side on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-45-lg.webp?v=340">
+                <img src="assets/nsf2026-45.webp?v=340" alt="Three festival-goers arm in arm on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-46-lg.webp?v=340">
+                <img src="assets/nsf2026-46.webp?v=340" alt="Two festival-goers together on the red carpet" width="700" height="875" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-47-lg.webp?v=340">
+                <img src="assets/nsf2026-47.webp?v=340" alt="Two festival-goers laughing together on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-48-lg.webp?v=340">
+                <img src="assets/nsf2026-48.webp?v=340" alt="Two festival-goers side by side on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-49-lg.webp?v=340">
+                <img src="assets/nsf2026-49.webp?v=340" alt="Two festival-goers on the red carpet, one in a denim jacket and cap" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-50-lg.webp?v=340">
+                <img src="assets/nsf2026-50.webp?v=340" alt="Two festival-goers in sunglasses on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-51-lg.webp?v=340">
+                <img src="assets/nsf2026-51.webp?v=340" alt="Two festival-goers laughing on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-52-lg.webp?v=340">
+                <img src="assets/nsf2026-52.webp?v=340" alt="Two festival-goers posing for the camera on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-53-lg.webp?v=340">
+                <img src="assets/nsf2026-53.webp?v=340" alt="A festival-goer on the red carpet in a black leather jacket" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-54-lg.webp?v=340">
+                <img src="assets/nsf2026-54.webp?v=340" alt="A festival-goer with arms folded on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-55-lg.webp?v=340">
+                <img src="assets/nsf2026-55.webp?v=340" alt="Three festival-goers with popcorn and drinks on the red carpet" width="700" height="875" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-56-lg.webp?v=340">
+                <img src="assets/nsf2026-56.webp?v=340" alt="Two festival-goers together on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-57-lg.webp?v=340">
+                <img src="assets/nsf2026-57.webp?v=340" alt="Two festival-goers side by side on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-58-lg.webp?v=340">
+                <img src="assets/nsf2026-58.webp?v=340" alt="A festival-goer on the red carpet with arms thrown wide" width="700" height="875" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-59-lg.webp?v=340">
+                <img src="assets/nsf2026-59.webp?v=340" alt="Three festival-goers together on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-60-lg.webp?v=340">
+                <img src="assets/nsf2026-60.webp?v=340" alt="Two festival-goers leaning together on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-61-lg.webp?v=340">
+                <img src="assets/nsf2026-61.webp?v=340" alt="Two festival-goers on the red carpet, one holding popcorn" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-62-lg.webp?v=340">
+                <img src="assets/nsf2026-62.webp?v=340" alt="A festival-goer on the red carpet holding a tub of popcorn" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-63-lg.webp?v=340">
+                <img src="assets/nsf2026-63.webp?v=340" alt="Two festival-goers with popcorn and drinks on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-64-lg.webp?v=340">
+                <img src="assets/nsf2026-64.webp?v=340" alt="Two festival-goers with arms outstretched on the red carpet" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-65-lg.webp?v=340">
+                <img src="assets/nsf2026-65.webp?v=340" alt="Two festival-goers embracing on the red carpet, one with an arm raised" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-66-lg.webp?v=340">
+                <img src="assets/nsf2026-66.webp?v=340" alt="Three festival-goers together on the red carpet" width="700" height="1050" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-67-lg.webp?v=340">
+                <img src="assets/nsf2026-67.webp?v=340" alt="Two filmmakers sharing a microphone, shown on the big screen" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-68-lg.webp?v=340">
+                <img src="assets/nsf2026-68.webp?v=340" alt="Two people with a microphone shown on screen during the Q&amp;A" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-69-lg.webp?v=340">
+                <img src="assets/nsf2026-69.webp?v=340" alt="Two audience members on screen as the camera finds them in their seats" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-70-lg.webp?v=340">
+                <img src="assets/nsf2026-70.webp?v=340" alt="An audience member standing with a microphone to ask a question" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-71-lg.webp?v=340">
+                <img src="assets/nsf2026-71.webp?v=340" alt="An audience member with a microphone in the darkened theater" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-72-lg.webp?v=340">
+                <img src="assets/nsf2026-72.webp?v=340" alt="Two people on stage, a dune landscape on the screen behind them" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-73-lg.webp?v=340">
+                <img src="assets/nsf2026-73.webp?v=340" alt="An award winner on stage holding the Audience Award trophy and certificate" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-74-lg.webp?v=340">
+                <img src="assets/nsf2026-74.webp?v=340" alt="Five people on stage after the Audience Award is presented" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-75-lg.webp?v=340">
+                <img src="assets/nsf2026-75.webp?v=340" alt="Six people on stage as the awards are presented" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-76-lg.webp?v=340">
+                <img src="assets/nsf2026-76.webp?v=340" alt="Seven people on stage at the close of the festival" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nsf2026-77-lg.webp?v=340">
+                <img src="assets/nsf2026-77.webp?v=340" alt="The group on stage applauding at the close of the festival" width="700" height="467" loading="lazy">
+              </button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section shorts-pastfilms">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow"><span class="dot"></span>Watch Past Films</span>
+    </div>
+    <div class="dl-group dl-group--static" data-reveal>
+      <h2 class="dl-group__title">Select a Year to Watch Short Films from that Festival</h2>
+      <div class="dl-group__body">
+        <div class="yearpick yearpick--toggle">
+          <div class="yearpick__btns" role="group" aria-label="Past films by year">
+          <button type="button" class="year-btn" data-year="2023" aria-pressed="false">2023</button>
+          <button type="button" class="year-btn" data-year="2024" aria-pressed="false">2024</button>
+          <button type="button" class="year-btn" data-year="2025" aria-pressed="false">2025</button>
+          </div>
+          <div class="yearpick__panels">
+          <div class="year-panel" data-year="2023" hidden>
+            <div class="pastfilms-block">
+              <div class="filmmap">
+                <img src="assets/2023-films.webp?v=340" alt="2023 Nantucket Shorts Fest films" width="2000" height="1125" loading="lazy">
+      <a class="filmmap__btn" href="https://youtu.be/LBywyqmJwAQ" target="_blank" rel="noopener" aria-label="Floating" style="left:1.2%;top:15.0%;width:31.3%;height:17.0%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/ba-XxbLCJlA" target="_blank" rel="noopener" aria-label="For the Love of F&uacute;tbol" style="left:1.2%;top:34.4%;width:31.3%;height:16.6%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/vbhMuFCqMZk" target="_blank" rel="noopener" aria-label="Jackie and Koko" style="left:1.2%;top:54.0%;width:31.3%;height:16.5%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/GP2iPrGb4oU" target="_blank" rel="noopener" aria-label="Hero Sister" style="left:1.2%;top:73.5%;width:31.3%;height:16.5%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/nvqoH_MIq60" target="_blank" rel="noopener" aria-label="Okean" style="left:33.5%;top:15.0%;width:31.5%;height:17.0%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/emH9yDGoALg" target="_blank" rel="noopener" aria-label="Fish Tale" style="left:33.5%;top:34.4%;width:31.5%;height:16.6%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/FQeGBJy1gY4" target="_blank" rel="noopener" aria-label="Mail Time!" style="left:33.5%;top:54.0%;width:31.5%;height:16.5%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/iqCQILJmcs8" target="_blank" rel="noopener" aria-label="Butterfly" style="left:33.5%;top:73.5%;width:31.5%;height:16.5%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/LOm6esyX0YA" target="_blank" rel="noopener" aria-label="Lost in Nevers Land" style="left:66.4%;top:15.0%;width:31.6%;height:17.0%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/Sm6cat73g1c" target="_blank" rel="noopener" aria-label="Contemplating" style="left:66.4%;top:34.4%;width:31.6%;height:16.6%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/y8-IxXlC0ug" target="_blank" rel="noopener" aria-label="Lollipop Cowboy" style="left:66.4%;top:54.0%;width:31.6%;height:16.5%"></a>
+              </div>
+            </div>
+          </div>
+          <div class="year-panel" data-year="2024" hidden>
+            <div class="pastfilms-block">
+              <div class="filmmap">
+                <img src="assets/2024-films.webp?v=340" alt="2024 Nantucket Shorts Fest films" width="1920" height="1080" loading="lazy">
+      <a class="filmmap__btn" href="https://youtu.be/nWe_5RXiA3o" target="_blank" rel="noopener" aria-label="Nantucket Cribz" style="left:1.5%;top:16.0%;width:31.0%;height:16.0%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/U6UXhusJS0o" target="_blank" rel="noopener" aria-label="Pine Needle River" style="left:1.5%;top:35.0%;width:31.0%;height:16.5%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/Z3X1CH-u-H8" target="_blank" rel="noopener" aria-label="One Cup" style="left:1.5%;top:54.5%;width:31.0%;height:16.5%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/0Mh4cQkA-vk" target="_blank" rel="noopener" aria-label="Oil and Isle" style="left:1.5%;top:73.0%;width:31.0%;height:16.5%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/QEBAda5KD2c" target="_blank" rel="noopener" aria-label="The Garden Hoax" style="left:33.5%;top:16.0%;width:31.5%;height:16.0%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/EO0_MxZkSHo" target="_blank" rel="noopener" aria-label="Still Here" style="left:33.5%;top:35.0%;width:31.5%;height:16.5%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/HTj2TPY9V5U" target="_blank" rel="noopener" aria-label="Steps" style="left:33.5%;top:54.5%;width:31.5%;height:16.5%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/UKBL7zPkKaM" target="_blank" rel="noopener" aria-label="Dancing Daffodils" style="left:33.5%;top:73.0%;width:31.5%;height:16.5%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/34HOPgYSgO0" target="_blank" rel="noopener" aria-label="The Nantucket Click" style="left:66.5%;top:16.0%;width:32.0%;height:16.0%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/4WCDH7sTdNc" target="_blank" rel="noopener" aria-label="Scottyssey" style="left:66.5%;top:35.0%;width:32.0%;height:16.5%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/QwQBtp7a4Gg" target="_blank" rel="noopener" aria-label="Breakfast with George" style="left:66.5%;top:54.5%;width:32.0%;height:16.5%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/Ijrx-ZN3Nqg" target="_blank" rel="noopener" aria-label="Azure Odyssey" style="left:66.5%;top:73.0%;width:32.0%;height:16.5%"></a>
+              </div>
+            </div>
+          </div>
+          <div class="year-panel" data-year="2025" hidden>
+            <div class="pastfilms-block">
+              <div class="filmmap">
+                <img src="assets/2025-films.webp?v=340" alt="2025 Nantucket Shorts Fest films" width="1920" height="1080" loading="lazy">
+      <a class="filmmap__btn" href="https://youtu.be/erhf4khahNs" target="_blank" rel="noopener" aria-label="Two Nights for a Quarter" style="left:1.2%;top:15.0%;width:30.7%;height:18.0%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/Yu8rUuEGwvE" target="_blank" rel="noopener" aria-label="The Cranberry Alarm Clock" style="left:1.2%;top:34.2%;width:30.7%;height:19.6%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/Wvh9vn5Az0Y" target="_blank" rel="noopener" aria-label="Benchless Sport" style="left:1.2%;top:54.0%;width:30.7%;height:16.5%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/TzcPRXzeatY" target="_blank" rel="noopener" aria-label="Moon Rock River Calendar" style="left:1.2%;top:72.2%;width:30.7%;height:16.0%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/VHQlcTqIQEE" target="_blank" rel="noopener" aria-label="The Meeting Place Pt.1" style="left:32.0%;top:15.0%;width:34.3%;height:18.0%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/T58z9MXxUGU" target="_blank" rel="noopener" aria-label="A Second Chance: MMAN" style="left:32.0%;top:34.2%;width:34.3%;height:19.6%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/uaxZDjb9euk" target="_blank" rel="noopener" aria-label="Rule Number 2" style="left:32.0%;top:54.0%;width:34.3%;height:16.5%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/TQfsNmQAmHE" target="_blank" rel="noopener" aria-label="Flocked" style="left:32.0%;top:72.2%;width:34.3%;height:16.0%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/sEFGiMSfr3w" target="_blank" rel="noopener" aria-label="Just Desserts" style="left:66.4%;top:15.0%;width:30.1%;height:18.0%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/4_ZHYKG1DaM" target="_blank" rel="noopener" aria-label="Ghostwriter" style="left:66.4%;top:34.2%;width:30.1%;height:19.6%"></a>
+      <a class="filmmap__btn" href="https://youtu.be/mEUs1EVs7Ww" target="_blank" rel="noopener" aria-label="KEVIN" style="left:66.4%;top:54.0%;width:30.1%;height:16.5%"></a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- footer (built by site.js) -->
+<footer id="site-footer"></footer>
+
+<script src="site.js?v=340"></script>
+</body>
+</html>

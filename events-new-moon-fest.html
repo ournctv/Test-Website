@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New Moon Fest — NCTV</title>
+<meta name="description" content="Nantucket Community Television — Vision. Voice. Life. Broadcasting Nantucket on Channels 8 | 1072.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,560;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;650;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=340">
+</head>
+<body data-page="events-new-moon-fest.html">
+
+<!-- broadcast status strip -->
+<div class="status-strip">
+  <div class="wrap">
+    <span class="live">On Air</span>
+    <span class="sep">/</span>
+    <span>Nantucket, MA</span>
+    <span class="sep">/</span>
+    <span>TV Channels: Civic 8 &amp; HD 1072</span>
+    <span class="roll">Vision. Voice. Life.</span>
+  </div>
+</div>
+
+<!-- navigation (built by site.js) -->
+<header id="site-nav"></header>
+
+<section class="vhero vhero--bare">
+  <div class="hero__media">
+    <img class="hero__fallback" src="assets/nmf-banner-backup.webp" alt="Nantucket Shorts Fest">
+    <div class="hero__video" aria-hidden="true"><div id="heroVideo"></div></div>
+  </div>
+  <div class="hero__shield" aria-hidden="true"></div>
+
+</section>
+  <script>
+  (function(){
+    var HERO_VIDEO_ID = "M2MO7zAWUAc";
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion:reduce)").matches) return;
+    var wrap = document.querySelector(".hero__video");
+    var media = document.querySelector(".hero__media");
+    if (!wrap || !document.getElementById("heroVideo")) return;
+    var started = false;
+    function show(){ if (media) media.classList.add("is-playing"); }
+    function hide(){ if (media) media.classList.remove("is-playing"); }
+    function init(){
+      new YT.Player("heroVideo", {
+        videoId: HERO_VIDEO_ID,
+        playerVars: {
+          autoplay:1, mute:1, controls:0, iv_load_policy:3,
+          modestbranding:1, rel:0, playsinline:1, disablekb:1, fs:0,
+          origin: location.origin
+        },
+        events: {
+          onReady: function(e){ e.target.mute(); e.target.playVideo();
+            setTimeout(function(){ try{ e.target.playVideo(); }catch(_){} }, 400);
+            setInterval(function(){ try{ var d=e.target.getDuration(); if(d>1 && e.target.getCurrentTime()>=d-0.4){ e.target.seekTo(0,true); } }catch(_){} }, 250); },
+          onStateChange: function(e){
+            if (e.data === YT.PlayerState.PLAYING) { if (!started) { started = true; setTimeout(show, 700); } }
+            else if (e.data === YT.PlayerState.PAUSED) { hide(); }
+            else if (e.data === YT.PlayerState.ENDED) { try{ e.target.seekTo(0,true); e.target.playVideo(); }catch(_){} }
+          },
+          onError: function(){ hide(); }
+        }
+      });
+    }
+    if (window.YT && window.YT.Player) {
+      init();
+    } else {
+      var prev = window.onYouTubeIframeAPIReady;
+      window.onYouTubeIframeAPIReady = function(){ if (typeof prev === "function") prev(); init(); };
+      if (!document.getElementById("yt-iframe-api")) {
+        var tag = document.createElement("script");
+        tag.id = "yt-iframe-api";
+        tag.src = "https://www.youtube.com/iframe_api";
+        document.head.appendChild(tag);
+      }
+    }
+    setTimeout(function(){ if (!started) hide(); }, 8000);
+  })();
+  </script>
+<section class="section newmoon-intro">
+  <div class="wrap newmoon-intro__grid" data-reveal>
+    <img class="newmoon-intro__logo" src="assets/NEWMOON_Dark_blue-04.webp" alt="New Moon Fest — Nantucket Empowering Women">
+    <p class="newmoon-intro__text"><span class="newmoon-intro__lead">A short film festival that celebrates female filmmakers.</span><br>NEW (Nantucket Empowering Women) Moon Fest blossoms every Memorial Day weekend. This event showcases poignant short films created by extraordinary female filmmakers from around the world. Friends and neighbors enjoy cinema, delicious food, and (most importantly) each other.</p>
+  </div>
+</section>
+<section class="section newmoon-sponsors">
+  <div class="wrap">
+    <div class="sponsor-map" data-reveal>
+      <img class="newmoon-sponsors__img" src="assets/2026-top-sponsors.webp?v=340" alt="Thank you to all our sponsors, especially Lemon Press, SCA, The Inquirer and Mirror, White Elephant Nantucket, Cisco Brewers, N Magazine and Nantucket Current">
+      <a class="sponsor-map__btn" href="https://www.lemonpressnantucket.com/" target="_blank" rel="noopener" aria-label="Lemon Press" style="left:0.98%;top:23.51%;width:15.64%;height:69.53%"></a>
+      <a class="sponsor-map__btn" href="https://www.sconsetcasino.com/" target="_blank" rel="noopener" aria-label="Sconset Casino" style="left:17.96%;top:25.11%;width:14.87%;height:66.07%"></a>
+      <a class="sponsor-map__btn" href="https://www.ack.net/" target="_blank" rel="noopener" aria-label="The Inquirer and Mirror" style="left:34.06%;top:24.44%;width:15.00%;height:66.67%"></a>
+      <a class="sponsor-map__btn" href="https://www.whiteelephantnantucket.com/" target="_blank" rel="noopener" aria-label="White Elephant Nantucket" style="left:50.19%;top:23.33%;width:15.50%;height:68.89%"></a>
+      <a class="sponsor-map__btn" href="https://www.ciscobrewers.com/" target="_blank" rel="noopener" aria-label="Cisco Brewers" style="left:66.54%;top:22.52%;width:16.09%;height:71.51%"></a>
+      <a class="sponsor-map__btn" href="https://www.n-magazine.com/" target="_blank" rel="noopener" aria-label="N Magazine" style="left:83.53%;top:22.59%;width:15.44%;height:68.64%"></a>
+    </div>
+  </div>
+</section>
+<section class="section nmf-news">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow"><span class="dot"></span>Recent News</span>
+    </div>
+    <details class="pastsel__year dl-group nmf-sub" data-reveal>
+      <summary>Learn More</summary>
+      <div class="dl-group__body">
+        <ul class="news-list">
+          <li><span class="news-list__date">11/1/26</span> &mdash; The 2027 New Moon Fest submissions are open! To submit your film, <a href="https://filmfreeway.com/NEWMoonFest" target="_blank" rel="noopener">click here</a>. Please be sure to read the submission rules on this webpage.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+</section>
+<section class="section nmf-rules">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow"><span class="dot"></span>Submission Rules &amp; Conditions</span>
+    </div>
+    <details class="pastsel__year dl-group nmf-sub" data-reveal>
+      <summary>Learn More</summary>
+      <div class="dl-group__body">
+        <p class="nmf-rules__submit">To submit your film, please <a href="https://filmfreeway.com/NEWMoonFest" target="_blank" rel="noopener">click here</a></p>
+        <ul class="nmf-rules__list">
+        <li>In honor of the Wild Woman archetype, films that depict strong, intuitive and persevering women characters qualify for NEW Moon Fest.</li>
+        <li>Only short films can be submitted.</li>
+        <li>Important Dates:
+          <ul>
+            <li>Submissions Open: 11/1/26</li>
+            <li>Earlybird Deadline: 12/15/26; price: $30</li>
+            <li>Regular Deadline: 2/1/27; price: $40</li>
+            <li>Extended Deadline: 3/1/27; price: $50</li>
+            <li>The notification date is 4/15/27</li>
+            <li>New Moon Fest 2027 takes place at the Siasconset Casino on 5/29/27.</li>
+          </ul>
+        </li>
+        <li>Qualified submissions feature women in at least three (or 75% of) lead creative roles: Writer, Producer, Director, Cinematographer, Editor, Composer, Lead Actor(s), or other significant key role.</li>
+        <li>Premiere status is not required.</li>
+        <li>Non-English films must be subtitled in English. For accessibility, English-language shorts must offer English captioning.</li>
+        <li>NEW Moon Fest can only accept, consider, and notify entries submitted with a valid entry form and non-refundable entry fee. To be considered for NEW Moon Fest, entrants must fill out the entry form on FilmFreeway. Entrants must submit a Secure Online Screener. Pay the entry fee online through FilmFreeway. We will provide fee waivers on a case-by-case basis. Because of the limited number of fee waivers, we cannot guarantee you will receive one, even if you meet the criteria outlined below. Eligibility for a Fee Waiver will depend on the following:
+          <ul>
+            <li>You lack the financial means to pay our submission fee, either partially or in full.</li>
+            <li>You are unable to pay the submission fee for political/geographical reasons outside of your control.</li>
+          </ul>
+        </li>
+        <li>For requests to submit after the Extended Deadline, please contact the NEW Moon Fest programmers at <a href="mailto:newmoon@ournctv.org">newmoon@ournctv.org</a>.</li>
+        <li>If your contact information or premiere status changes between entry submission and our notification date, please update your information on FilmFreeway and email any changes to the NEW Moon Fest programmers at: <a href="mailto:newmoon@ournctv.org">newmoon@ournctv.org</a></li>
+        <li>Entrants must be legally authorized to enter their film in NEW Moon Fest and the entry must not be subject to any claims or litigation and must not be threatened by any claims or litigation. It is the sole responsibility of the entrant to secure clearance from the copyright holders of any copyrighted materials in the film. The entrant releases and discharges NEW Moon Fest, its employees and agents from any and all claims, demands or causes of actions related to misappropriation or infringement of copyright or violation of any other right arising out of or relating to the film submission.</li>
+        <li>In the event that a submission is accepted as a finalist by NEW Moon Fest, the finalist hereby agrees to the following rights and requests and grants to NEW Moon Fest without reservations, conditions or qualifications:
+          <ul>
+            <li>NEW Moon Fest reserves the right to screen an exhibition-quality digital file of the film on 5/29/27 in front of a live audience at the Siasconset Casino Association in Nantucket, MA.</li>
+            <li>NEW Moon Fest reserves the right to coordinate ALL publicity and press outreach concerning the film&rsquo;s presentation leading up to and at the festival event, including but not limited to:</li>
+            <li>The right to use excerpted clips, trailers, still images and/or titles, and information from or relating to the film for promotional purposes in all media including NEW Moon Fest&rsquo;s website.</li>
+            <li>The right to issue and authorize publicity concerning the filmmakers and the film and to use all associated names, likenesses and biographical information.</li>
+          </ul>
+        </li>
+        <li>NEW Moon Fest reserves the right to collect any and all proceeds fundraised at the NEW Moon Fest - Nantucket Empowering Women event including but not limited to: festival tickets, auction items, sponsorships, and pledges. All funds raised will be contributed to the Nantucket Community Television&rsquo;s mission to engage Nantucket by connecting stories to audiences, government to citizens, and students to hands-on learning.</li>
+        <li>NEW Moon Fest encourages applications from people of all races, religions, national origins, sexual orientations, gender identities, gender expressions, and ages, as well as veterans and individuals with disabilities. We strongly encourage you to apply if you are from a marginalized or underrepresented group, particularly in the film industry. NEW Moon Fest reserves the right to consider for inclusion in the event, and include in the event, films received at any time and through any means, channel, or process, including means, channels, or processes other than those outlined in these Terms. Nothing in these terms or otherwise requires NEW Moon Fest to select for event inclusion any of the films submitted through the process outlined in these terms.</li>
+        <li>Filmmakers are welcome to reach out to the NEW Moon Fest programmers at any time during the submission process at <a href="mailto:newmoon@ournctv.org">newmoon@ournctv.org</a></li>
+        <li>NEW Moon Fest - Nantucket Empowering Women is an original festival event of the 501(c)(3) organization, Nantucket Community Television, Inc.</li>
+        <li>By agreeing to the terms and conditions on the entry form for NEW Moon Fest, the entrant submitting a film to NEW Moon Fest - Nantucket Empowering Women acknowledges that s/he has read, understood and agrees to the rules and guidelines described above.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+</section>
+<section class="section nmf-auction">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow"><span class="dot"></span>New Moon Fest Auction</span>
+    </div>
+    <details class="pastsel__year dl-group nmf-sub" data-reveal>
+      <summary>To learn about the auction items, click here.</summary>
+      <div class="dl-group__body">
+        <p class="auction-note">This auction is a curated collection of one-of-a-kind deals from all over Nantucket. The 2026 auction may be closed, but you can see the items that sold (<a href="https://app.betterunite.com/nctv-bidforthecausenewmoonfest2026/Offers?silentauction=1" target="_blank" rel="noopener">click here</a>) or buy the same items by visiting the websites of the auction partners on the following list.</p>
+        <ul class="auction-partners">
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">1111 Nantucket</span>
+            <span class="auction-partners__what">Yoga classes, teacher trainings, and retreats</span>
+            <a class="auction-partners__shop" href="https://www.1111nantucket.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at 1111 Nantucket</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">ACK Beauty Salon</span>
+            <span class="auction-partners__what">Hair, nails, facials, massage, and lashes</span>
+            <a class="auction-partners__shop" href="https://ackbeautysalon.glossgenius.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at ACK Beauty Salon</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">ACK Pastry Shack</span>
+            <span class="auction-partners__what">Pastries, breads, cakes, and catering</span>
+            <a class="auction-partners__shop" href="https://www.ackpastryshack.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at ACK Pastry Shack</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">ACKupuncture</span>
+            <span class="auction-partners__what">Acupuncture, sports massage, and hot stone massage</span>
+            <a class="auction-partners__shop" href="https://www.facebook.com/people/ACKupuncture/100060709181922/" target="_blank" rel="noopener">Contact<span class="sr-only"> ACKupuncture</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Barbara Clarke Photography</span>
+            <span class="auction-partners__what">Portraits, weddings, and Nantucket seascape prints</span>
+            <a class="auction-partners__shop" href="https://www.barbaraclarkephotography.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Barbara Clarke Photography</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Bill Hoenk Photography</span>
+            <span class="auction-partners__what">Event and portrait photography and fine art prints</span>
+            <a class="auction-partners__shop" href="https://www.billhoenkphotography.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Bill Hoenk Photography</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Billie&rsquo;s Nantucket</span>
+            <span class="auction-partners__what">Steaks, seafood, raw bar, and craft cocktails</span>
+            <a class="auction-partners__shop" href="https://billiesnantucket.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Billie&rsquo;s Nantucket</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Blue Box Café</span>
+            <span class="auction-partners__what">Tiffany &amp; Co.&rsquo;s café on the 6th floor of their Fifth Avenue flagship in New York &mdash; breakfast, afternoon tea, and all-day dining</span>
+            <a class="auction-partners__shop" href="https://www.blueboxcafenyc.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Blue Box Café</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Bodega</span>
+            <span class="auction-partners__what">Home furnishings, décor, and accessories</span>
+            <a class="auction-partners__shop" href="https://bodeganantucket.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Bodega</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Nantucket Bookworks</span>
+            <span class="auction-partners__what">Books and gifts on Broad Street since 1972</span>
+            <a class="auction-partners__shop" href="https://www.nantucketbookworks.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Nantucket Bookworks</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Brotherhood of Thieves</span>
+            <span class="auction-partners__what">Whaling bar and tavern on Broad Street</span>
+            <a class="auction-partners__shop" href="https://brotherhoodnantucket.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Brotherhood of Thieves</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">byCasendra</span>
+            <span class="auction-partners__what">Massage therapy, plus handmade art and clothing</span>
+            <a class="auction-partners__shop" href="https://bycasendra.massagetherapy.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at byCasendra</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">CALdesign Vintage</span>
+            <span class="auction-partners__what">Handcrafted denim jackets, blazers, and cashmere coats</span>
+            <a class="auction-partners__shop" href="https://caldesignvintage.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at CALdesign Vintage</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Cary Hazlegrove</span>
+            <span class="auction-partners__what">Fine art prints of Nantucket, photographed since 1978</span>
+            <a class="auction-partners__shop" href="https://www.hazlegrove.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Cary Hazlegrove</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Chalermkhwan Buadam (Kwan)</span>
+            <span class="auction-partners__what">Acrylic paintings in a Thai tradition, worked with gold leaf</span>
+            <a class="auction-partners__shop" href="https://www.nantucketarts.org/artists/chalermkhwan-buadam" target="_blank" rel="noopener">Info<span class="sr-only"> about Chalermkhwan Buadam (Kwan)</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Cisco Brewers</span>
+            <span class="auction-partners__what">Beer, wine, and spirits brewed on Nantucket</span>
+            <a class="auction-partners__shop" href="https://www.ciscobrewers.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Cisco Brewers</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Color Up Nails &amp; Spa</span>
+            <span class="auction-partners__what">Manicures, pedicures, and nail art</span>
+            <a class="auction-partners__shop" href="https://colorupnailsspa.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Color Up Nails &amp; Spa</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Company of the Cauldron</span>
+            <span class="auction-partners__what">Prix fixe farm-to-table dining on India Street</span>
+            <a class="auction-partners__shop" href="https://companyofthecauldron.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Company of the Cauldron</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Create</span>
+            <span class="auction-partners__what">Fine art, craft, and children&rsquo;s art supplies</span>
+            <a class="auction-partners__shop" href="https://www.nantucketcreate.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Create</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Crosswinds Restaurant</span>
+            <span class="auction-partners__what">Breakfast, lunch, and dinner at the airport</span>
+            <a class="auction-partners__shop" href="https://crosswindsnantucket.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Crosswinds Restaurant</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Cru</span>
+            <span class="auction-partners__what">Oysters, raw bar, and harborside dining</span>
+            <a class="auction-partners__shop" href="https://crunantucket.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Cru</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Daiva Salon</span>
+            <span class="auction-partners__what">Haircuts, color, nails, and lashes, year-round</span>
+            <a class="auction-partners__shop" href="https://daivasalonack.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Daiva Salon</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Dan LeMaitre</span>
+            <span class="auction-partners__what">Surf and ocean photography by a Nantucket native</span>
+            <a class="auction-partners__shop" href="https://danlemaitre.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Dan LeMaitre</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Deborah Vander Wolk</span>
+            <span class="auction-partners__what">Mixed-media folk art in bright color and metallic leaf</span>
+            <a class="auction-partners__shop" href="https://deborahvanderwolk.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Deborah Vander Wolk</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Dharma Yoga</span>
+            <span class="auction-partners__what">Yoga and movement classes at Bartlett&rsquo;s Farm</span>
+            <a class="auction-partners__shop" href="https://dharmayoganantucket.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Dharma Yoga</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">DÔEN</span>
+            <span class="auction-partners__what">Women&rsquo;s clothing in timeless, California-inspired collections</span>
+            <a class="auction-partners__shop" href="https://shopdoen.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at DÔEN</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Donata Vita</span>
+            <span class="auction-partners__what">Hand-painted Lithuanian paper cutting, one of a kind</span>
+            <a class="auction-partners__shop" href="https://www.nantucketarts.org/artists/donata-vita" target="_blank" rel="noopener">Shop<span class="sr-only"> at Donata Vita</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Egan Maritime Institute</span>
+            <span class="auction-partners__what">Nantucket maritime history and the Shipwreck &amp; Lifesaving Museum</span>
+            <a class="auction-partners__shop" href="https://eganmaritime.org/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Egan Maritime Institute</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Elite Island Resorts</span>
+            <span class="auction-partners__what">All-inclusive Caribbean resorts in Antigua and St. Lucia</span>
+            <a class="auction-partners__shop" href="https://eliteislandresorts.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Elite Island Resorts</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Elizabeth Congdon</span>
+            <span class="auction-partners__what">Oil paintings: floral still lifes and plein-air landscapes</span>
+            <a class="auction-partners__shop" href="https://elizabethcongdonart.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Elizabeth Congdon</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Emma Ross Hair &amp; Beauty</span>
+            <span class="auction-partners__what">Hair, nails, waxing, massage, and skin care</span>
+            <a class="auction-partners__shop" href="https://emmarosshairandbeauty.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Emma Ross Hair &amp; Beauty</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Ethos Wine Bar &amp; Bistro</span>
+            <span class="auction-partners__what">Wine bar, cocktails, and farm-to-table bistro dining</span>
+            <a class="auction-partners__shop" href="https://ethosnantucket.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Ethos Wine Bar &amp; Bistro</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">EZIA Athletic Club</span>
+            <span class="auction-partners__what">Members-only personal training, massage, and recovery lab</span>
+            <a class="auction-partners__shop" href="https://eziaathleticclub.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at EZIA Athletic Club</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Flowers on Chestnut</span>
+            <span class="auction-partners__what">Wedding and event florals, fresh-cut flowers, and gifts</span>
+            <a class="auction-partners__shop" href="https://flowersonchestnut.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Flowers on Chestnut</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Galley Beach</span>
+            <span class="auction-partners__what">Beachfront fine dining and a 5,000-bottle wine cellar</span>
+            <a class="auction-partners__shop" href="https://galleybeach.net/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Galley Beach</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Gaslight</span>
+            <span class="auction-partners__what">Japanese-inspired small plates and late-night live music</span>
+            <a class="auction-partners__shop" href="https://www.gaslightnantucket.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Gaslight</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Glistn</span>
+            <span class="auction-partners__what">Medspa and aesthetic treatments for the skin</span>
+            <a class="auction-partners__shop" href="https://glistnnantucket.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Glistn</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Hy-Line Cruises</span>
+            <span class="auction-partners__what">Hyannis ferries, sightseeing cruises, and fishing trips</span>
+            <a class="auction-partners__shop" href="https://hylinecruises.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Hy-Line Cruises</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Island Glow</span>
+            <span class="auction-partners__what">Lash extensions, facials, waxing, and sunless tanning</span>
+            <a class="auction-partners__shop" href="https://www.nantucketislandglow.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Island Glow</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Island Kitchen</span>
+            <span class="auction-partners__what">Healthy island dining and full-service event catering</span>
+            <a class="auction-partners__shop" href="https://islandkitchen.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Island Kitchen</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Jurate Zilyte</span>
+            <span class="auction-partners__what">Myofascial release and integrative massage therapy</span>
+            <a class="auction-partners__shop" href="https://www.facebook.com/p/Jurate-Zilyte-lmt-100063670826074/" target="_blank" rel="noopener">Contact<span class="sr-only"> Jurate Zilyte</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Kit Noble Photography</span>
+            <span class="auction-partners__what">Fine art Nantucket prints, portraits, and photo workshops</span>
+            <a class="auction-partners__shop" href="https://www.kitnoble.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Kit Noble Photography</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Laura Stewart</span>
+            <span class="auction-partners__what">Knitting, Nantucket baskets, and ACK bracelets</span>
+            <a class="auction-partners__shop" href="https://nha.org/learn/heritage-craft/instructors/laura-stewart/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Laura Stewart</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Laurie Richards Pixel Perfect</span>
+            <span class="auction-partners__what">Portrait and wedding photography, children a specialty</span>
+            <a class="auction-partners__shop" href="https://pixelperfectnantucket.zenfolio.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Laurie Richards Pixel Perfect</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Lemon Press</span>
+            <span class="auction-partners__what">Organic cafe: smoothies, eclectic eats, and cocktails</span>
+            <a class="auction-partners__shop" href="https://www.lemonpressnantucket.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Lemon Press</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Life Massage</span>
+            <span class="auction-partners__what">Swedish, deep tissue, hot stone, and couples massage</span>
+            <a class="auction-partners__shop" href="https://www.acklifemassage.net/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Life Massage</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Maine Forest Yurts</span>
+            <span class="auction-partners__what">Furnished yurts and glamping in the Maine woods</span>
+            <a class="auction-partners__shop" href="https://maineforestyurts.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Maine Forest Yurts</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Marissa Collections</span>
+            <span class="auction-partners__what">Luxury clothing, accessories, and fine jewelry</span>
+            <a class="auction-partners__shop" href="https://marissacollections.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Marissa Collections</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Melissa Dudley Designs</span>
+            <span class="auction-partners__what">Handcrafted Nantucket jewelry, coins, and Sailors&rsquo; Valentines</span>
+            <a class="auction-partners__shop" href="https://melissadudleydesigns.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Melissa Dudley Designs</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Meryl Bralower</span>
+            <span class="auction-partners__what">Collage art drawn from flowers, gardens, and island color</span>
+            <a class="auction-partners__shop" href="https://www.nantucketarts.org/artists/meryl-bralower" target="_blank" rel="noopener">Shop<span class="sr-only"> at Meryl Bralower</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Michael Getter Home Services</span>
+            <span class="auction-partners__what">Home caretaking, repairs, and project management</span>
+            <a class="auction-partners__shop" href="https://www.getterhomeservices.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Michael Getter Home Services</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Mirbeau Inn &amp; Spa</span>
+            <span class="auction-partners__what">French-inspired inn and spa stays in New York and Massachusetts</span>
+            <a class="auction-partners__shop" href="https://mirbeau.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Mirbeau Inn &amp; Spa</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Murray&rsquo;s Toggery Shop</span>
+            <span class="auction-partners__what">Home of the original Nantucket Reds, since 1945</span>
+            <a class="auction-partners__shop" href="https://nantucketreds.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Murray&rsquo;s Toggery Shop</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Nantucket Book Festival</span>
+            <span class="auction-partners__what">Authors, readings, and literary events</span>
+            <a class="auction-partners__shop" href="https://nantucketbookfestival.org/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Nantucket Book Festival</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Nantucket Comedy Festival</span>
+            <span class="auction-partners__what">Stand-up shows and comedy education programs</span>
+            <a class="auction-partners__shop" href="https://nantucketcomedyfestival.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Nantucket Comedy Festival</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Nantucket Cottage Hospital</span>
+            <span class="auction-partners__what">The island&rsquo;s hospital, part of Mass General Brigham</span>
+            <a class="auction-partners__shop" href="https://nantuckethospital.org/" target="_blank" rel="noopener">Info<span class="sr-only"> about Nantucket Cottage Hospital</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Nantucket Dance Theater</span>
+            <span class="auction-partners__what">Dance performances and programs, including the Nutcracker</span>
+            <a class="auction-partners__shop" href="https://nantucketdancetheater.org/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Nantucket Dance Theater</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Nantucket Dreamland</span>
+            <span class="auction-partners__what">Nonprofit film and cultural center: movies, talks, and events</span>
+            <a class="auction-partners__shop" href="https://nantucketdreamland.org/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Nantucket Dreamland</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Nantucket Garden Festival</span>
+            <span class="auction-partners__what">A celebration of island gardening</span>
+            <a class="auction-partners__shop" href="https://nantucketgardenfestival.org/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Nantucket Garden Festival</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Nantucket Health Club</span>
+            <span class="auction-partners__what">The island&rsquo;s fitness center</span>
+            <a class="auction-partners__shop" href="https://nantuckethealthclub.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Nantucket Health Club</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Nantucket Historical Association</span>
+            <span class="auction-partners__what">Island history, museums, and the Whaling Museum</span>
+            <a class="auction-partners__shop" href="https://nha.org/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Nantucket Historical Association</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Nantucket Performing Arts Center</span>
+            <span class="auction-partners__what">Shows and events on North Water Street</span>
+            <a class="auction-partners__shop" href="https://nantucketperformingarts.org/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Nantucket Performing Arts Center</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Nantucket Wellness Festival</span>
+            <span class="auction-partners__what">Classes and events for a happier, healthier life</span>
+            <a class="auction-partners__shop" href="https://nantucketwellnessfestival.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Nantucket Wellness Festival</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Nantucket Wine &amp; Food Festival</span>
+            <span class="auction-partners__what">Tastings with featured wineries and restaurants</span>
+            <a class="auction-partners__shop" href="https://nantucketwinefestival.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Nantucket Wine &amp; Food Festival</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Nomad</span>
+            <span class="auction-partners__what">Curated textures and tactile objects sourced worldwide</span>
+            <a class="auction-partners__shop" href="https://nomadnantucket.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Nomad</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">On the Isle</span>
+            <span class="auction-partners__what">Plays, musicals, and children&rsquo;s theater in &rsquo;Sconset</span>
+            <a class="auction-partners__shop" href="https://ontheisle.org/" target="_blank" rel="noopener">Shop<span class="sr-only"> at On the Isle</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Pi Pizzeria</span>
+            <span class="auction-partners__what">Wood-fired Neapolitan pizza and Italian dining</span>
+            <a class="auction-partners__shop" href="https://pipizzeria.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Pi Pizzeria</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Pip &amp; Anchor</span>
+            <span class="auction-partners__what">Market and café cooking with local farm produce</span>
+            <a class="auction-partners__shop" href="https://pipandanchor.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Pip &amp; Anchor</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Pizza Gemelle</span>
+            <span class="auction-partners__what">Pizza seven days a week, lunch Friday and Saturday</span>
+            <a class="auction-partners__shop" href="https://pizzeriagemelle.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Pizza Gemelle</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Proprietors Bar &amp; Table</span>
+            <span class="auction-partners__what">Shared plates and cocktails on India Street</span>
+            <a class="auction-partners__shop" href="https://proprietorsnantucket.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Proprietors Bar &amp; Table</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">R.J. Miller Salon &amp; Spa</span>
+            <span class="auction-partners__what">Hair, nails, spa treatments, and bridal styling</span>
+            <a class="auction-partners__shop" href="https://rjmillersalons.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at R.J. Miller Salon &amp; Spa</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Rainbow Fleet</span>
+            <span class="auction-partners__what">Consigned women&rsquo;s clothing, shoes, and accessories</span>
+            <a class="auction-partners__shop" href="https://therainbowfleetnantucket.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Rainbow Fleet</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Sarah Todd</span>
+            <span class="auction-partners__what">Contemporary paintings, commissions, and available works</span>
+            <a class="auction-partners__shop" href="https://sarahtoddart.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Sarah Todd</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Scissorhands</span>
+            <span class="auction-partners__what">Haircuts, colour, highlights, and conditioning treatments</span>
+            <a class="auction-partners__shop" href="https://scissorhandsnantucket.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Scissorhands</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Seaman Schepps</span>
+            <span class="auction-partners__what">Bold, handcrafted fine jewelry since 1904</span>
+            <a class="auction-partners__shop" href="https://seamanschepps.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Seaman Schepps</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Sharon Woods Hussey</span>
+            <span class="auction-partners__what">Island-inspired paintings and gold jewelry</span>
+            <a class="auction-partners__shop" href="https://www.nantucketlooms.com/collections/sharon-woods-hussey" target="_blank" rel="noopener">Shop<span class="sr-only"> at Sharon Woods Hussey</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Sheri Perelman</span>
+            <span class="auction-partners__what">Yoga, Ayurveda, and somatic movement; knits and honey</span>
+            <a class="auction-partners__shop" href="https://sherisclasses.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Sheri Perelman</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Ships Inn</span>
+            <span class="auction-partners__what">Historic boutique hotel and restaurant</span>
+            <a class="auction-partners__shop" href="https://shipsinnnantucket.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Ships Inn</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Sisters Salon and Spa</span>
+            <span class="auction-partners__what">Massage, facials, hair, nails, waxing, and bridal</span>
+            <a class="auction-partners__shop" href="https://nantucketspasalon.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Sisters Salon and Spa</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Skar Designs Jewelry</span>
+            <span class="auction-partners__what">Handcrafted sun and Nantucket jewelry, made in small batches</span>
+            <a class="auction-partners__shop" href="https://skardesigns.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Skar Designs Jewelry</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Slip 14</span>
+            <span class="auction-partners__what">Seafood and cocktails at the end of Old South Wharf</span>
+            <a class="auction-partners__shop" href="https://slip14.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Slip 14</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Small Town Girl</span>
+            <span class="auction-partners__what">Preserves, confections, ceramics, and private chef services</span>
+            <a class="auction-partners__shop" href="https://www.stgnantucket.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Small Town Girl</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Sophie T&rsquo;s Pizza</span>
+            <span class="auction-partners__what">Pizza, plus beer and wine to go</span>
+            <a class="auction-partners__shop" href="https://sophietspizza.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Sophie T&rsquo;s Pizza</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Steamship Authority</span>
+            <span class="auction-partners__what">Car and high-speed ferries to Nantucket</span>
+            <a class="auction-partners__shop" href="https://www.steamshipauthority.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Steamship Authority</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Stop &amp; Shop</span>
+            <span class="auction-partners__what">Groceries, pharmacy, and home delivery</span>
+            <a class="auction-partners__shop" href="https://stopandshop.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Stop &amp; Shop</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Summer Shades</span>
+            <span class="auction-partners__what">Sunglasses in the Courtyard on Straight Wharf</span>
+            <a class="auction-partners__shop" href="https://business.nantucketchamber.org/list/member/summer-shades-2483" target="_blank" rel="noopener">Info<span class="sr-only"> about Summer Shades</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Suzanne Keating, Astrologer</span>
+            <span class="auction-partners__what">Natal chart readings, tarot parties, and past-life regressions</span>
+            <a class="auction-partners__shop" href="https://www.pathwaysofthesoulack.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Suzanne Keating, Astrologer</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Tavern on the Green</span>
+            <span class="auction-partners__what">American dining in New York&rsquo;s Central Park</span>
+            <a class="auction-partners__shop" href="https://www.tavernonthegreen.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Tavern on the Green</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Thai House</span>
+            <span class="auction-partners__what">Authentic Thai cuisine and sushi for takeout</span>
+            <a class="auction-partners__shop" href="https://www.ackthaihouse.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Thai House</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">The Chanticleer</span>
+            <span class="auction-partners__what">Fine dining in a rose-covered &rsquo;Sconset cottage</span>
+            <a class="auction-partners__shop" href="https://chanticleernantucket.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at The Chanticleer</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">The Copper Rose</span>
+            <span class="auction-partners__what">Tarot decks, ritual oils, herbs, and crystals</span>
+            <a class="auction-partners__shop" href="https://thecopperrosenantucket.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at The Copper Rose</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">The Dance Space</span>
+            <span class="auction-partners__what">Bounce, sculpt, yoga, and dance classes</span>
+            <a class="auction-partners__shop" href="https://www.thedancespacenantucket.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at The Dance Space</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">The Haulover</span>
+            <span class="auction-partners__what">Nantucket&rsquo;s outfitter since 1995 &mdash; outerwear, apparel, and gear</span>
+            <a class="auction-partners__shop" href="https://thehaulover.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at The Haulover</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">The Lynx</span>
+            <span class="auction-partners__what">Sails aboard a replica 1812 privateer schooner</span>
+            <a class="auction-partners__shop" href="https://tallshiplynx.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at The Lynx</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">The Nantucket Tavern &amp; Gazebo</span>
+            <span class="auction-partners__what">Ready-to-drink cocktails and Tavern merchandise</span>
+            <a class="auction-partners__shop" href="https://nantuckettavern.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at The Nantucket Tavern &amp; Gazebo</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">The Pearl</span>
+            <span class="auction-partners__what">Dinner and cocktails on Federal Street</span>
+            <a class="auction-partners__shop" href="https://pearlnantucket.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at The Pearl</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">The Seagrille</span>
+            <span class="auction-partners__what">Chef-crafted seafood, an island favorite since 1991</span>
+            <a class="auction-partners__shop" href="https://theseagrille.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at The Seagrille</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">The Summer House</span>
+            <span class="auction-partners__what">&rsquo;Sconset cottages, restaurant, and beachside bistro</span>
+            <a class="auction-partners__shop" href="https://thesummerhouse.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at The Summer House</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">The Westmoor Club</span>
+            <span class="auction-partners__what">Private island club: sports, dining, and family programs</span>
+            <a class="auction-partners__shop" href="https://thewestmoorclub.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at The Westmoor Club</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Theatre Workshop of Nantucket</span>
+            <span class="auction-partners__what">Professional island theatre since 1956</span>
+            <a class="auction-partners__shop" href="https://theatrenantucket.org/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Theatre Workshop of Nantucket</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Three Sisters Farm</span>
+            <span class="auction-partners__what">An 11-acre farmhouse to rent in Midcoast Maine</span>
+            <a class="auction-partners__shop" href="https://threesisterscollection.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Three Sisters Farm</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Tiffany at Darya Salon + Spa</span>
+            <span class="auction-partners__what">Hair, color, nails, waxing, and spa treatments</span>
+            <a class="auction-partners__shop" href="https://daryasalonspa.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Tiffany at Darya Salon + Spa</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Toscana Saporita Cooking School</span>
+            <span class="auction-partners__what">Italian cooking courses in Tuscany</span>
+            <a class="auction-partners__shop" href="https://toscanasaporita.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Toscana Saporita Cooking School</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Wheat</span>
+            <span class="auction-partners__what">Casual luxury apparel for women and men</span>
+            <a class="auction-partners__shop" href="https://www.thewheatcollection.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Wheat</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Winnetu Oceanside Resort</span>
+            <span class="auction-partners__what">Oceanside resort in Edgartown on Martha&rsquo;s Vineyard</span>
+            <a class="auction-partners__shop" href="https://www.winnetu.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Winnetu Oceanside Resort</span></a>
+          </li>
+          <li class="auction-partners__row">
+            <span class="auction-partners__name">Zulu Nyala Heritage Safari Lodge</span>
+            <span class="auction-partners__what">Safari lodges and game drives in KwaZulu-Natal</span>
+            <a class="auction-partners__shop" href="https://zulunyala.com/" target="_blank" rel="noopener">Shop<span class="sr-only"> at Zulu Nyala Heritage Safari Lodge</span></a>
+          </li>
+        </ul>
+      </div>
+    </details>
+  </div>
+</section>
+<section class="section nmf-awards">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow"><span class="dot"></span>Awards</span>
+      <h2>Congratulations to the New&nbsp;Moon&nbsp;Fest winners!</h2>
+    </div>
+    <div class="yearpick" data-reveal>
+      <div class="yearpick__btns" role="group" aria-label="New Moon Fest winners by year">
+        <button type="button" class="year-btn" data-year="2024" aria-pressed="false">2024</button>
+        <button type="button" class="year-btn" data-year="2025" aria-pressed="false">2025</button>
+        <button type="button" class="year-btn is-active" data-year="2026" aria-pressed="true">2026</button>
+      </div>
+      <div class="yearpick__panels">
+        <div class="year-panel" data-year="2024" hidden>
+          <div class="awards-panel">
+            <img class="awards-img" src="assets/2024-nmf-winners.webp?v=340" alt="Congratulations to the 2024 New Moon Fest winners" width="1800" height="2610" loading="lazy">
+            <p class="awards-text">The Grey Lady Award is determined by the New Moon Fest audience. They vote on their favorite film and the winner earns this award. The Wild Woman Award is given by the New Moon Fest Selection Committee to the film that embodies the free feminine spirit.</p>
+          </div>
+        </div>
+        <div class="year-panel" data-year="2025" hidden>
+          <div class="awards-panel">
+            <img class="awards-img" src="assets/2025-nmf-winners.webp?v=340" alt="Congratulations to the 2025 New Moon Fest winners" width="1800" height="2610" loading="lazy">
+            <p class="awards-text">The Grey Lady Award is determined by the New Moon Fest audience. They vote on their favorite film and the winner earns this award. The Wild Woman Award is given by the New Moon Fest Selection Committee to the film that embodies the free feminine spirit.</p>
+          </div>
+        </div>
+        <div class="year-panel" data-year="2026">
+          <div class="awards-panel">
+            <img class="awards-img" src="assets/2026-nmf-winners.webp?v=340" alt="Congratulations to the 2026 New Moon Fest winners" width="1800" height="2610">
+            <p class="awards-text">The Grey Lady Award is determined by the New Moon Fest audience. They vote on their favorite film and the winner earns this award. The Wild Woman Award is given by the New Moon Fest Selection Committee to the film that embodies the free feminine spirit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section pastsel">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow"><span class="dot"></span>Official Film Selections</span>
+      <h2>Click below to Learn about the Films</h2>
+    </div>
+    <div class="yearpick" data-reveal>
+      <div class="yearpick__btns" role="group" aria-label="Official selections by year">
+        <button type="button" class="year-btn" data-year="2024" aria-pressed="false">2024</button>
+        <button type="button" class="year-btn" data-year="2025" aria-pressed="false">2025</button>
+        <button type="button" class="year-btn is-active" data-year="2026" aria-pressed="true">2026</button>
+      </div>
+      <div class="yearpick__panels">
+        <div class="year-panel" data-year="2024" hidden>
+          <div class="pastsel__movies">
+            <button class="movie-btn" type="button" data-movie="an-avocado-pit">An Avocado Pit</button>
+            <button class="movie-btn" type="button" data-movie="before-we-die">Before We Die</button>
+            <button class="movie-btn" type="button" data-movie="boomerang">Boomerang</button>
+            <button class="movie-btn" type="button" data-movie="cherry">Cherry</button>
+            <button class="movie-btn" type="button" data-movie="death-to-the-bikini">Death to the Bikini</button>
+            <button class="movie-btn" type="button" data-movie="dont-say-vagina">Don't Say Vagina!</button>
+            <button class="movie-btn" type="button" data-movie="essex-girls">Essex Girls</button>
+            <button class="movie-btn" type="button" data-movie="primer-cuento">Primer Cuento</button>
+            <button class="movie-btn" type="button" data-movie="safe">Safe</button>
+            <button class="movie-btn" type="button" data-movie="soraya">Soraya</button>
+            <button class="movie-btn" type="button" data-movie="the-girl-inside">The Girl Inside</button>
+            <button class="movie-btn" type="button" data-movie="wild-woman">Wild Woman</button>
+          </div>
+          <div class="pastsel__panels">
+        <div class="movie-panel" data-movie="an-avocado-pit" hidden>
+          <img class="movie-poster" src="assets/an-avocado-pit-poster.webp?v=340" alt="An Avocado Pit poster">
+          <div class="movie-text">
+            <h3 class="movie-title">An Avocado Pit</h3>
+            <p class="movie-meta">NARRATIVE / 19 MINUTES 40 SECONDS / PORTUGUESE + ENGLISH SUBTITLES / PORTUGAL</p>
+            <p class="movie-synopsis">Larissa, a trans woman and Cláudio, a cis man, meet one night, in the streets of Lisbon. Two people, two realities, who dance their differences away till morning light. In challenge, in surprise, in awe and in recognition. An empowering story, free from violence and filled with light and hope for the better days yet to come.</p>
+            <h4 class="movie-credits-h">Credits</h4>
+            <p class="movie-credits">Writer: Ary Zara<br>Director: Ary Zara<br>Producers: Andreia Nunes, Frederico Serra<br>Director of Photography: Leandro Ferrão<br>Editor: Sara Marques<br>Artistic Direction: Carina Caspar<br>Sound: Cyril Santos<br>Music: Xinobi<br>Starring: Gaya de Medeiros and Ivo Canelas</p>
+          </div>
+        </div>
+        <div class="movie-panel" data-movie="before-we-die" hidden>
+          <img class="movie-poster" src="assets/before-we-die-poster.webp?v=340" alt="Before We Die poster">
+          <div class="movie-text">
+            <h3 class="movie-title">Before We Die</h3>
+            <p class="movie-meta">DRAMA / 16 MINUTES 15 SECONDS / ENGLISH / USA</p>
+            <p class="movie-synopsis">After a deadly virus hits New York City, two young survivors take refuge on a roof. In efforts to fill the voids of all they&rsquo;ve lost, the characters work together to complete a list of things they want to do before they die. The story begs the question: When society shatters and tomorrow is no longer guaranteed, what are you left with?</p>
+            <h4 class="movie-credits-h">Credits</h4>
+            <p class="movie-credits">Writer: Audrey Lane and Lizzy Walther<br>Director: Kate diRienzi<br>Producer: Avery Looser, Blessid Ugedegbe<br>Director of Photography: Cece Chan<br>Production Designer: Jacqueline Brockel<br>Starring: Audrey Lane and Lizzy Walther</p>
+          </div>
+        </div>
+        <div class="movie-panel" data-movie="boomerang" hidden>
+          <img class="movie-poster" src="assets/boomerang-poster.webp?v=340" alt="Boomerang poster">
+          <div class="movie-text">
+            <h3 class="movie-title">Boomerang</h3>
+            <p class="movie-meta">NARRATIVE COMEDY, LGBTQIA+ / 13 MINUTES / ENGLISH / USA</p>
+            <p class="movie-synopsis">After losing her job, a flailing millennial is forced to move back into her childhood bedroom and navigate life with her dysfunctional parents. Determined to take on a lover, she re-connects with a middle school crush.</p>
+            <p class="movie-quote">&ldquo;Boomerang is my love letter to anyone who endured the lockdown with their family. It&rsquo;s a timely and relatable tale about an entire generation of millennials who were forced to move home and suffered arrested development. At its core, Boomerang is about complicated family relationships and how deeply funny life can be in its most serious moments. The medium of film grants the ability to tell stories that help us connect and process what we&rsquo;ve all been through, and I wanted to use comedy to do that.&rdquo; &ndash; Rylee Jean Ebsen, Director of BOOMERANG</p>
+            <h4 class="movie-credits-h">Credits</h4>
+            <p class="movie-credits">Writers: Rylee Jean Ebsen, Sydney Steinberg<br>Director: Rylee Jean Ebsen<br>Producers: Rylee Jean Ebsen, Katie White<br>Executive Producers: Augusta King, Elizabeth Sehn &amp; Tim Sehn<br>Starring: Sydney Steinberg, Marin Hinkle, Phil Abrams, Noah Findling, Kaitlyn Tanimoto</p>
+          </div>
+        </div>
+        <div class="movie-panel" data-movie="cherry" hidden>
+          <img class="movie-poster" src="assets/cherry-poster.webp?v=340" alt="Cherry poster">
+          <div class="movie-text">
+            <h3 class="movie-title">Cherry</h3>
+            <p class="movie-meta">DOCUMENTARY / 22 MINUTES 30 SECONDS / FRENCH + ENGLISH SUBTITLES / CANADA</p>
+            <p class="movie-synopsis">Portrait of Marie-Lise Chouinard, this radiant woman imbued with contagious liveliness. An intimate encounter with Marie-Lise through a wishlist of activities of her own. Cherry is the epitome of resilience, friendship and hope.</p>
+            <p class="movie-quote">&ldquo;Meeting Marie-Lise is a pledge to laugh out loud, to listen with the greatest and gentlest attention and to nourish serenity in all circumstances.&rdquo; &ndash; Laurence Gagné-Frégeau, Director of CHERRY</p>
+            <h4 class="movie-credits-h">Credits</h4>
+            <p class="movie-credits">Writer: Laurence Gagné-Frégeau<br>Director: Laurence Gagné-Frégeau<br>Editor: Laurence Gagné-Frégeau<br>Music: Marie-Lise Chouinard &amp; Christian David</p>
+          </div>
+        </div>
+        <div class="movie-panel" data-movie="death-to-the-bikini" hidden>
+          <img class="movie-poster" src="assets/death-to-the-bikini-poster.webp?v=340" alt="Death to the Bikini! poster">
+          <div class="movie-text">
+            <h3 class="movie-title">Death to the Bikini!</h3>
+            <p class="movie-meta">COMEDIC DRAMA / 16 MINUTES / FRENCH + ENGLISH SUBTITLES / CANADA</p>
+            <p class="movie-synopsis">Lili, a feisty 10-year-old girl, has always swam topless. When her parents force her to wear a bikini top for a trip to the water park, she rebels: why should she hide her flat chest when her friends, all boys, don&rsquo;t have to?</p>
+            <p class="movie-quote">&ldquo;It was during a hot summer day, at the age of 7, that I dared for the first and only time to swim topless with my friends. I never did it again, too embarrassed to behave like a &ldquo;boy&rdquo;. It is the memory of this torment faced with this benign desire to bathe my chest in the air which is at the origin of this film. How absurd to feel society&rsquo;s discomfort with the female body at such a young age! An ode to the enthusiasm of youth and to girls who are not afraid, Death to the Bikini! thus carries a demanding, universal message and, through coming-of-age, presents young girls with a model with whom they can identify.&rdquo; &ndash; Justine Gauthier, Director of DEATH TO THE BIKINI!</p>
+            <h4 class="movie-credits-h">Credits</h4>
+            <p class="movie-credits">Writer: Justine Gauthier<br>Director: Justine Gauthier<br>Producer: Léonie Hurtubise<br>Director of Photography: Gabrielle Bergeron<br>Editor: Marie-Pier Grignon<br>Artistic Director: Yola van Leeuwenkamp<br>Sound: Jacob Marcouz, Ilyaa Ghafouri, Joey Simas<br>Music: Viviane Audet &amp; Robin-Joël Cool<br>Starring: Mia Garnier, Etienne Cardin, Aksel Leblanc, Olivier Leblanc, Johnnovan Jobin, Eve Pressault, and Eric Robidoux</p>
+          </div>
+        </div>
+        <div class="movie-panel" data-movie="dont-say-vagina" hidden>
+          <img class="movie-poster" src="assets/dont-say-vagina-poster.webp?v=340" alt="Don't Say Vagina! poster">
+          <div class="movie-text">
+            <h3 class="movie-title">Don't Say Vagina!</h3>
+            <p class="movie-meta">CRINGE COMEDY / 8 MINUTES 40 SECONDS / ENGLISH / USA</p>
+            <p class="movie-synopsis">When an act of liberation is seen as criminal, 12-year-old Monica is forced to stand trial for her summer camp misdeeds.</p>
+            <h4 class="movie-credits-h">Credits</h4>
+            <p class="movie-credits">Writer: Marissa Ruben<br>Director: Marissa Ruben<br>Producer: Avery Looser<br>Director of Photography: Avery Looser<br>Production Designer: Madison Calicchia<br>Starring: Marissa Ruben, Kelsey Stalter, Brock Looser, Ariana Papaleo, Arielle Beth Klein, and Alia Cuadros-Contreras</p>
+          </div>
+        </div>
+        <div class="movie-panel" data-movie="essex-girls" hidden>
+          <img class="movie-poster" src="assets/essex-girls-poster.webp?v=340" alt="Essex Girls poster">
+          <div class="movie-text">
+            <h3 class="movie-title">Essex Girls</h3>
+            <p class="movie-meta">COMING-OF-AGE / 15 MINUTES / ENGLISH / UNITED KINGDOM</p>
+            <p class="movie-synopsis">Flipping the &ldquo;Essex Girls&rdquo; trope, this coming-of-age film explores Black British girlhood and magical female friendships in 2009 Essex. Navigating adolescence in Benfleet, Essex hasn&rsquo;t been straightforward for British-Nigerian Bisola. After an incident at her high school shunts her into the orbit of the only other Black girl in her year, Bisola is plunged into a journey of discovering a whole new side of herself.</p>
+            <p class="movie-quote">&ldquo;This film aims to give girls like me, who have grown up in environments where hardly anyone else looks like them, the opportunity to see their experiences reflected on screen. In writing and performing the role of Bisola, I channeled my specific experience into something more universal. What is it like to be a Black girl in an almost completely white space? Does it make it harder for you to accept yourself? What effect does this have on you? And most importantly, to what extent will you go to, in order to survive and be completely happy in your natural born skin? In this short film we explore themes of identity, race, friendship, and representation. We bear witness to the catalyst that propels Bisola on a journey of gaining new-found confidence and self acceptance. We shine a light on a story that resonates with many but has been neglected and left untold.&rdquo; &ndash; Busayo Ige, Writer of ESSEX GIRLS</p>
+            <p class="movie-quote">&ldquo;Coming-of-age tales centering experiences of Black, teen, female protagonists are scarce. Why do we mainly see coming-of-age films for young girls when they&rsquo;re white? Why are Black female protagonists never afforded the same juvenile mistakes on their journeys of self-discovery? And if we do see these stories, why are they almost always rooted in trauma or social issues that insist these Black girls mature beyond their years? We want to be the corrective to that.&rdquo; &ndash; Yero Timi-Biu, Director of ESSEX GIRLS</p>
+            <h4 class="movie-credits-h">Credits</h4>
+            <p class="movie-credits">Writer: Busayo Ige<br>Director: Yero Timi-Biu<br>Producers: Angela Moneke, Simon Hatton<br>Director of Photography: Nathalie Pitters<br>Production Designer: Phoebe Platman<br>Costume Designer: Cynthia Lawrence-John<br>Hair/Make-Up Designer: Bianca Simone Scott<br>Casting Director: Hannah Marie Williams<br>Editor: Galina Chakarova<br>Starring: Busayo Ige, Corinna Brown, Adrianna Bertola, Krysstina Frempong, Rebecca Dike, Craig Webb, Bruno Cryan, Charlie Baker, Dan Gaisford, Daniel Adeosun, with Tomi Egbowon-Ogunjobi, and Maisie Smith</p>
+          </div>
+        </div>
+        <div class="movie-panel" data-movie="primer-cuento" hidden>
+          <img class="movie-poster" src="assets/primer-cuento-poster.webp?v=340" alt="Primer Cuento poster">
+          <div class="movie-text">
+            <h3 class="movie-title">Primer Cuento</h3>
+            <p class="movie-meta">NARRATIVE / 2 MINUTES 50 SECONDS / SILENT / ARGENTINA</p>
+            <p class="movie-synopsis">Caterina has created a routine that allows her to leave each morning looking impeccable and stylishly put together. But not everything can be controlled. Much less the little secrets.</p>
+            <h4 class="movie-credits-h">Credits</h4>
+            <p class="movie-credits">Writer: Mercedes Arturo<br>Director: Mercedes Arturo<br>Executive Producer: Gisela Pelaez<br>Director of Photography: Tamara Zukierman<br>Editor: Clara Wetzel<br>Original Score: Cecilia Assalini<br>Starring: Mariana Gagliano</p>
+          </div>
+        </div>
+        <div class="movie-panel" data-movie="safe" hidden>
+          <img class="movie-poster" src="assets/safe-poster.webp?v=340" alt="Safe poster">
+          <div class="movie-text">
+            <h3 class="movie-title">Safe</h3>
+            <p class="movie-meta">STOP MOTION ANIMATION / 45 SECONDS / ENGLISH / NANTUCKET</p>
+            <p class="movie-synopsis">Doxia knows that feeling safe and supported, especially by friends and family, is important for everyone&rsquo;s future. Her hope is that all girls everywhere can feel safe, too.</p>
+            <p class="movie-synopsis">Doxia Barber lives on Nantucket with her family and has four siblings. She&rsquo;s currently in 6th grade. While she enjoys making all types of movies and loves to write, direct, and act in them, she finds stop motion films particularly satisfying as they incorporate her love of drawing.</p>
+            <h4 class="movie-credits-h">Credits</h4>
+            <p class="movie-credits">Writer: Doxia Barber<br>Director: Doxia Barber<br>Producer: Doxia Barber</p>
+          </div>
+        </div>
+        <div class="movie-panel" data-movie="soraya" hidden>
+          <img class="movie-poster" src="assets/soraya-poster.webp?v=340" alt="Soraya poster">
+          <div class="movie-text">
+            <h3 class="movie-title">Soraya</h3>
+            <p class="movie-meta">NARRATIVE / 8 MINUTES 30 SECONDS / ENGLISH SUBTITLES / IRAN</p>
+            <p class="movie-synopsis">Soraya is the story of one of thousands of Iranian women who decide to have an intentional abortion out of fear of family prejudices, but due to this surgery being illegal in Iran, Soraya is forced to leave her country secretly with the help of smugglers.</p>
+            <p class="movie-quote">&ldquo;At the beginning of the protests, I had to travel to Iran. It was in those same days that I received a proposal to make a short film. I decided to depict the problems and demands of Iranian women.&rdquo; &ndash; Maryam Rahimi, Director of SORAYA</p>
+            <h4 class="movie-credits-h">Credits</h4>
+            <p class="movie-credits">Writer: Maryam Rahimi<br>Director: Maryam Rahimi<br>Producer: Seyed Amir Parvin Hosseini<br>Director of Photography: Behnam Soleymani<br>Editor: Siavash Kordjan<br>Composer: Kamyar Behbahani<br>Starring: Oranous Ghavami, Elnaz Habibi, Sheyda Pahlevan, Parsa Mazinani, and Reza Mohebi</p>
+          </div>
+        </div>
+        <div class="movie-panel" data-movie="the-girl-inside" hidden>
+          <img class="movie-poster" src="assets/the-girl-inside-poster.webp?v=340" alt="The Girl Inside poster">
+          <div class="movie-text">
+            <h3 class="movie-title">The Girl Inside</h3>
+            <p class="movie-meta">DOCUMENTARY / 10 MINUTES 20 SECONDS / ENGLISH / USA</p>
+            <p class="movie-synopsis">As numbers of women and girls in federal, state, and local facilities continue to skyrocket, &ldquo;The Girl Inside,&rdquo; a new documentary by 1 Girl Revolution, features a behind-the-walls look into Cook County Jail and a life-changing academic course &ldquo;Storytelling as a Healing Art&rdquo; taught to incarcerated women.</p>
+            <p class="movie-synopsis">&ldquo;The Girl Inside&rdquo; starts with a performance by Dr. Laura Biagi for her students about the power of every person&rsquo;s voice and then leads her students through a series of storytelling exercises and vocal warmups. The culmination of the one day course and the documentary is when Dr. Biagi gives her students a writing prompt, &ldquo;I am your voice and this is what I want you to know&hellip;&rdquo;</p>
+            <p class="movie-quote">&ldquo;There are so many issues in the world because people are not able to be heard. Our voices are our revolution and we must look for opportunities to speak up for those who are forgotten and to raise other voices that often go unheard - and above all, we need to listen. We truly have the power to change the world through our lives and the world would look so different if we each truly believed that.&rdquo; &ndash; Dr. Laura Biagi, professor of &ldquo;Storytelling as a Healing Art&rdquo;</p>
+            <p class="movie-quote">&ldquo;1 Girl Revolution is focused on telling stories that often go unheard. There is a clear need to examine the lives of women in jail and prison, but they are too often overlooked. What is also rarely talked about is the power of education - even just one class has been shown to lower recidivism rates by upwards of 43%.&rdquo; &ndash; Kate Bryan, founder of 1 Girl Revolution and &ldquo;The Girl Inside&rdquo; curator</p>
+          </div>
+        </div>
+        <div class="movie-panel" data-movie="wild-woman" hidden>
+          <img class="movie-poster" src="assets/wild-woman-poster.webp?v=340" alt="Wild Woman poster">
+          <div class="movie-text">
+            <h3 class="movie-title">Wild Woman</h3>
+            <p class="movie-meta">WATERCOLOR 2D ANIMATION / 3 MINUTES 45 SECONDS / ENGLISH / USA</p>
+            <p class="movie-synopsis">A woman struggles to cope with her mantle as a mother while questioning the pressure placed on the individual by societal, religious, and governmental expectations and prejudices. Wild Woman is an animated poem to mankind which invokes current world issues such as drone-strikes and religious persecution in a plea for empathy. Scenes transform and melt as the animator also explores her personal struggle of becoming a mother and identifying as such in our current social and political climate.</p>
+            <p class="movie-quote">&ldquo;Wild Woman began as a concept where I was truly hoping to get in touch with the deeper, feminine aspects of myself. I wanted to embody femme through my drawings. What began as sensuality transformed into maternity, along with my own life path. As I worked on the film back in 2012, I became pregnant with my first child. I was terrified- a wholly new adventure that I had no experience in, and initially no desire to pursue. I struggled to complete the film, and by 2013 I was an exhausted new mother feeling all the pressure of societal perception, struggling to maintain my own identity. It was around this time that I also became more aware of the greater scope and scale of the global proceedings around me.<br><br>Thus, this film embodies a plea for empathy and compassion. It results from my encounters with misogyny, oppression, repression, the agoraphobic and the xenophobia in this world. It is a battle cry against all the hatred. The purity of new life, the change and evolutions I was experiencing in myself, mind and body, are all infused in each transforming frame and every poetic verse.&rdquo; &ndash; Vanessa Sweet, Director of WILD WOMAN</p>
+            <h4 class="movie-credits-h">Credits</h4>
+            <p class="movie-credits">Writer: Vanessa Sweet<br>Director: Vanessa Sweet<br>Animator: Vanessa Sweet<br>Assistant Art Director: Nicholas Sweet</p>
+          </div>
+        </div>
+          </div>
+        </div>
+        <div class="year-panel" data-year="2025" hidden>
+          <div class="pastsel__movies">
+            <button class="movie-btn" type="button" data-movie="barricade">Barricade</button>
+            <button class="movie-btn" type="button" data-movie="forget-me-not">Forget Me Not</button>
+            <button class="movie-btn" type="button" data-movie="jellyfish-and-lobster">Jellyfish and Lobster</button>
+            <button class="movie-btn" type="button" data-movie="my-jumper-it-roars">My Jumper, It Roars</button>
+            <button class="movie-btn" type="button" data-movie="on-a-sunday-at-eleven">On a Sunday at Eleven</button>
+            <button class="movie-btn" type="button" data-movie="we-should-all-be-futurists">We Should All Be Futurists</button>
+            <button class="movie-btn" type="button" data-movie="when-im-in-the-water">When I'm in the Water</button>
+            <button class="movie-btn" type="button" data-movie="why-not-now">Why Not Now</button>
+          </div>
+          <div class="pastsel__panels">
+        <div class="movie-panel" data-movie="barricade" hidden>
+          <img class="movie-poster" src="assets/barricade-poster.webp?v=340" alt="Barricade poster">
+          <div class="movie-text">
+            <h3 class="movie-title">Barricade</h3>
+            <p class="movie-meta">DRAMA / 11 MINUTES / ENGLISH / UK</p>
+            <p class="movie-synopsis">After experiencing a traumatic event on her school bus, Aleena bottles up her anger until a chance connection triggers a small act of rebellion.</p>
+            <p class="movie-quote">I've always had this image in my head of a group of students building a barricade. After reading an OFSTED report where sexual harassment in schools was described as “a routine part of everyday life,” I realized that this image belonged at the end of this story.<br><br>Every woman I know has experienced this—an incident in the playground, workplace, or at a bus stop that was brushed aside as a joke, no big deal, or simply "boys being boys." A passing moment, quickly labeled unremarkable, takes deep roots and causes serious damage.<br><br>After being assaulted by Will on the school bus, Aleena can't escape the micro-moments of misogyny embedded into everyday school life. For Aleena, this environment becomes more and more suffocating—until it's disrupted by a moment of unrestrained friendship.<br><br>Our aim with Barricade was to make a film that immerses audiences in the feelings teenage girls experience on an average school day: the insecurity, rage, euphoria, blood, sweat, and tears. To ask—what happens when all these feelings can no longer be contained? Where do they go when an institution repeatedly fails to provide a space or outlet for them? By ending the story with a moment of intense catharsis, I hope audiences will consider why this is such a rarity for survivors and victims. — Alice Johannessen</p>
+            <h4 class="movie-credits-h">Credits</h4>
+            <p class="movie-credits">Written &amp; Directed by: Alice Johannessen<br>Producer: Molly Young<br>Director of Photography: Ash Connaughton<br>Editor: Dave Jones<br>Production Designer: Katie Bonehill<br>Costume Designer: Ella Judy<br>Sound Design: Justin Dolby<br>Original Music by: Joel Nicell<br>Executive Producer (BFI Network): Natasha Wilson</p>
+          </div>
+        </div>
+        <div class="movie-panel" data-movie="forget-me-not" hidden>
+          <img class="movie-poster" src="assets/forget-me-not-poster.webp?v=340" alt="Forget Me Not poster">
+          <div class="movie-text">
+            <h3 class="movie-title">Forget Me Not</h3>
+            <p class="movie-meta">NARRATIVE / 15 MINUTES / ENGLISH / UK &amp; GERMANY</p>
+            <p class="movie-synopsis">Set in the 1970s, the film centers on two young girls who struggle with their mother's bipolar disorder, which constantly disrupts their lives and forces them to grow up too soon.</p>
+            <p class="movie-quote">We've always wanted to make a film that stems from our personal experience of growing up with a bipolar mother. While the details were changed, we were the little girls who sometimes longed for normality, and we were afraid of what might await us at home after school.<br><br>Mental illnesses often go ignored by society, and people who suffer from them are excluded from their communities. We believe it is important to raise awareness of the issue, because these illnesses affect more than just the person who is sick. This film is told from the point of view of the children—especially the older daughter—to convey the effect on their lives.<br><br>Forget Me Not is, above all, the call of a child who needs her mother, no matter how imperfect she may be. — Florine Nüesch &amp; Kim Nüesch</p>
+            <h4 class="movie-credits-h">Credits</h4>
+            <p class="movie-credits">Directors &amp; Writers: Florine &amp; Kim Nüesch<br>Producer: Malcolm Duncan<br>Cinematographer: Marz Miller<br>Production Designer: Miranda Lorenz<br>Original Music: Stephen Rennicks<br>Editor: Addie Liang<br>Casting Director: Alyssa Carter<br>Sound Designer: Bruce Chianese<br>Art Work: Alaska Sohne</p>
+          </div>
+        </div>
+        <div class="movie-panel" data-movie="jellyfish-and-lobster" hidden>
+          <img class="movie-poster" src="assets/jellyfish-and-lobster-poster.webp?v=340" alt="Jellyfish and Lobster poster">
+          <div class="movie-text">
+            <h3 class="movie-title">Jellyfish and Lobster</h3>
+            <p class="movie-meta">COMEDY / 20 MINUTES 1 SECOND / ENGLISH / UK</p>
+            <p class="movie-synopsis">Brought together serendipitously in a moment of mischief, two elderly care home residents form an unlikely relationship when they make an enchanted discovery.</p>
+            <p class="movie-synopsis">Yasmin Afifi is an award-winning writer/director based in London. Her work has been screened at festivals worldwide, including BAFTA/BIFA Qualifying ones such as Underwire and Tirana, Little Wings, New York, LFF, etc. She completed her BA at the University of Westminster on their prestigious Film course. She has just completed her MA in Directing at the National Film and Television School on a full scholarship from BBC Film. She loves using the medium of comedy, magical realism, and absurdism to explore taboo and dark subject matters. Taking very real, grounded characters and throwing them into more conceptual worlds to explore stories with heart and relevance to the world we live in.</p>
+            <h4 class="movie-credits-h">Credits</h4>
+            <p class="movie-credits">Writer &amp; Director: Yasmin Afifi<br>Producer: Elizabeth Rufai<br>Composer: Catherine Hillier<br>Cinematographer: Linda Wu<br>Editor: Max Reynolds<br>Casting Director: Charlotte Chapman<br>Production Designer: Gili Ofri<br>Costume Designer: Mei Cheng<br>Makeup Artist: Grace Darling Smith</p>
+          </div>
+        </div>
+        <div class="movie-panel" data-movie="my-jumper-it-roars" hidden>
+          <img class="movie-poster" src="assets/my-jumper-it-roars-poster.webp?v=340" alt="My Jumper, It Roars poster">
+          <div class="movie-text">
+            <h3 class="movie-title">My Jumper, It Roars</h3>
+            <p class="movie-meta">ANIMATION / 6 MINUTES / ENGLISH / AUSTRALIA</p>
+            <p class="movie-synopsis">Ellie spends her life channelling her frustrations into the collar of her jumper, and one day it decides to fight back.</p>
+            <p class="movie-synopsis">First-time writer/director Isabella Spagnolo is a Sydney-based 2D character animator. She graduated from the University of Technology Sydney (UTS) with Honours in Animation and has since worked at studios including Flying Bark Productions, Cheeky Little, and Studio Moshi on a number of feature films and television series, including Marvel's Moon Girl and Devil Dinosaur, LEGO Monkie Kid, and Nickelodeon's Rise of the Teenage Mutant Ninja Turtles.</p>
+            <p class="movie-synopsis">Isabella's animated worlds are an expression of her love for reflective storytelling and her passion for animation's capacity to communicate otherwise indescribable feelings and articulate them visually with little limitation.</p>
+            <h4 class="movie-credits-h">Credits</h4>
+            <p class="movie-credits">Director: Isabella Spagnolo<br>Cast: Tess Meyer, Matthew Predny<br>Executive Producers: Barbara Stephen, Alexia Gates-Foale, Alexs Stadermann<br>Producers: Sofia Iffla, Grace Rein, Francesca Hope</p>
+          </div>
+        </div>
+        <div class="movie-panel" data-movie="on-a-sunday-at-eleven" hidden>
+          <img class="movie-poster" src="assets/on-a-sunday-at-eleven-poster.webp?v=340" alt="On a Sunday at Eleven poster">
+          <div class="movie-text">
+            <h3 class="movie-title">On a Sunday at Eleven</h3>
+            <p class="movie-meta">NARRATIVE / 9 MINUTES / ENGLISH / CANADA</p>
+            <p class="movie-synopsis">A young Black ballerina performs her Sunday rituals while facing the pressure to perform whiteness. An unapologetic celebration of the powerful, ancestral bond embedded in Black women.</p>
+            <p class="movie-quote">Like most Black girls, growing up, I internalized Eurocentric beauty standards, seeing only white women's beauty being celebrated in the media. The film exposes the pressures Black women face from a young age to “whiten” our natural features and how the mainstream beauty industry and the institution of ballet are complicit.<br><br>Combatting the negative messages the lead character Angel receives is the community of Black women who show her that Black is beautiful. This film is a sensational celebration of Black cultural identity and our hair—and especially, the sisterhood that exists between Black women, which transcends the physical world.<br><br>From the royal costumes to the elaborate hair art, this Black-women-led creative team showed the Black women and girls in our cast the royalty they've always been. The energy on set was electrifying, like we all knew we were capturing something special.<br><br>I feel so excited to share this film with the world and show all the little Black girls this celebration of their unique beauty! — Alicia</p>
+            <h4 class="movie-credits-h">Credits</h4>
+            <p class="movie-credits">Written &amp; Directed By: Alicia K. Harris<br>Producer: Hayley Brown, Jeff Chiu<br>Co-Producer: Ollie Coombs<br>Associate Producer: Silvio Passaro<br>Cinematographer: Jeremy Cox<br>Production Designer: Nicole Simmons<br>Costume Designers: Charlene Akuamoah, Kahmeelia Smith<br>Editor: Ashley Gilmour<br>Sound Designer: Paul Lucien Col<br>Choreographer: Zoë Edwards<br>Hair Art &amp; Design: D'andra Morris<br>Key Hair &amp; Makeup Artist: Rahnell Branton</p>
+          </div>
+        </div>
+        <div class="movie-panel" data-movie="we-should-all-be-futurists" hidden>
+          <img class="movie-poster" src="assets/we-should-all-be-futurists-poster.webp?v=340" alt="We Should All Be Futurists poster">
+          <div class="movie-text">
+            <h3 class="movie-title">We Should All Be Futurists</h3>
+            <p class="movie-meta">COMEDY / 11 MINUTES / ENGLISH / ITALY</p>
+            <p class="movie-synopsis">At the turn of the years 1910s and 1920s in an allusive correspondence, Rosa confides in her friend Giorgina, telling her a secret: the machine-man envisioned by Marinetti is not a near future for mankind, as futurists say. It is a present for womankind, and Giorgina can unwrap it now.</p>
+            <p class="movie-synopsis">Angela Norelli (Roma, 1996) is a director, screenwriter, and film editor. She graduated from the Centro Sperimentale di Cinematografia in Rome and received her Master's in Philosophy from Sapienza University of Rome with a dissertation on Dziga Vertov.</p>
+            <p class="movie-synopsis">In 2021, she wrote, edited, and directed the found-footage film Children Love to Hide, which premiered in competition at the 39th Torino Film Festival and was later selected for several film festivals around the world. That same year, she edited the short film The Dependent Variables by Lorenzo Tardella, which premiered at the 2022 Berlinale and won the 2023 David di Donatello for Best Short Film.</p>
+            <p class="movie-synopsis">Angela was selected as a finalist in the 38th edition of the Premio Franco Solinas (currently in progress) for the story and screenplay of the feature film Roma, Notte dei Morti. She has also collaborated on archive research for Pietro Marcello and worked as assistant editor to Jacopo Quadri.</p>
+            <h4 class="movie-credits-h">Credits</h4>
+            <p class="movie-credits">With the Voice By: Caterina Cianfa, Zoe Tavarelli, Sofia Russotto<br>Film Editor: Angela Norelli<br>Sound Editor: Aman Falconi<br>Sound Engineer: Alberto Moscone<br>Re-Recording Mixer: Giulio Sereno<br>English Translator: Annachiara Vispi<br>Archive Researcher: Angela Norelli<br>Archive Research Collaborator: Edoardo Intonti<br>Graphic Designer: Alec Trenta<br>Color Grading: Vincenzo Marinese<br>Written and Directed By: Angela Norelli<br>Produced By: Centro Sperimentale di Cinematografia</p>
+          </div>
+        </div>
+        <div class="movie-panel" data-movie="when-im-in-the-water" hidden>
+          <img class="movie-poster" src="assets/when-im-in-the-water-poster.webp?v=340" alt="When I'm in the Water poster">
+          <div class="movie-text">
+            <h3 class="movie-title">When I'm in the Water</h3>
+            <p class="movie-meta">DOCUMENTARY / 11:52 MINUTES / ENGLISH / UNITED STATES</p>
+            <p class="movie-synopsis">Amongst the hundreds of lively ponds that make up Cape Cod, there's a thriving community of wildlife, foliage… and old women. Susan, the founder of “Old Ladies Against Underwater Garbage”, has gathered a group of electrifying old women to battle the growing pollution in the ponds. Life itself can become polluted by loneliness, especially as we age, but through this project these women have unexpectedly revitalized their own lives, not just their environments.</p>
+            <p class="movie-synopsis">Kennedy Laylon (she/her), is a documentarian from Syracuse, NY. She's worked on the award-winning student documentary First Name Basis (2023) as well as Birds in the Sea (2024), a cross-cultural documentary short filmed in Korea. She's an upcoming senior at Ithaca College, completing a major in Documentary Studies and Production with a minor in English. Kennedy loves making films that are both inspiring and impactful, and takes any opportunity she has to learn from the vast experiences her documentaries take her in.</p>
+            <h4 class="movie-credits-h">Credits</h4>
+            <p class="movie-credits">Director: Kennedy Laylon<br>Co-Directors: Michael Crater, Olivia Wood<br>Producer: Olivia Wood<br>Co-Producer: Ye Hang Yeo<br>Assistant Producer: Amen Ng<br>Director of Photography: Michael Crater<br>Editors: Michael Crater, Kennedy Laylon<br>Camera Operators: Kennedy Laylon, Michael Crater, Ye Hang Yeo, Olivia Wood</p>
+          </div>
+        </div>
+        <div class="movie-panel" data-movie="why-not-now" hidden>
+          <img class="movie-poster" src="assets/why-not-now-poster.webp?v=340" alt="Why Not Now poster">
+          <div class="movie-text">
+            <h3 class="movie-title">Why Not Now</h3>
+            <p class="movie-meta">DOCUMENTARY / 3 MINUTES / ENGLISH / USA</p>
+            <p class="movie-synopsis">At the age of 50, blind and afraid of water, Vivian Stancil dove in to save her life.</p>
+            <p class="movie-synopsis">Riley Hooper is a documentary film director and editor. Her body of work explores human resilience and spirit through short documentary portrait films. From a blind swimmer to the world's oldest mime to people buying and selling goods at the world's longest yard sale, Riley is drawn to people whose perspectives and pursuits inspire and challenge us. She believes everyone has a story to tell and approaches her subjects with deep curiosity and compassion.</p>
+            <p class="movie-synopsis">For the past nine years, Riley has turned the camera upon herself and her family, exploring similar themes of resilience, dignity, and self-discovery in Vestibule, a first-person documentary about her journey with Vestibulodynia—a vulvovaginal disorder. Combining verité footage with imaginative dance scenes, Riley documents her quest for pain-free sex. Through the process, she explores larger themes of sexual health, pleasure, bodily autonomy, and the systemic barriers that deny these rights to women and people with vulvas. Ultimately, Vestibule examines how pleasure can be a powerful tool for agency—a way to advocate for one's desires and needs, with impacts that ripple into every aspect of life. As her grandmother says in the film, “If you're on good terms with your vagina, you have a better life.”</p>
+            <p class="movie-synopsis">With support from Sundance and the Points North Institute, Vestibule is set to be released in 2027 as Riley's first feature. Looking ahead, she aspires to deepen her artistic practice by expanding her work in hybrid and formally inventive documentaries. She is particularly interested in integrating dance elements in new and boundary-pushing ways and continuing to explore themes of bodily autonomy. Building on her shorts and Vestibule as a foundation, she hopes to create films that honor the complexity of lived experience and invite audiences into deeper connection with themselves and the world around them.</p>
+            <h4 class="movie-credits-h">Credits</h4>
+            <p class="movie-credits">Featuring: Vivian Stancil &amp; Turner Stancil<br>Director/Editor: Riley Hooper<br>Producer: Caitlin Mae Burke<br>Cinematographer: Ora DeKornfeld<br>Underwater Cinematographer: Laura DiFiglio<br>AC/Gaffer: Nina Ham<br>Underwater AC: Steve Fitzpatrick<br>Sound: Cindy Takehara<br>Hair and makeup: Betsy Marshall<br>PA: Kaitlyn Jeffers<br>Colorist: Noah Todd<br>Original score: Zubin Hensler<br>&mdash; Piano: Jake Sherman<br>&mdash; Vocals: Sara Lucas<br>Sound design &amp; mix: Calvin Pia/One Thousand Birds<br>Assistant Editor: Jonathan Johnson</p>
+          </div>
+        </div>
+          </div>
+        </div>
+        <div class="year-panel" data-year="2026">
+          <div class="pastsel__movies">
+            <button class="movie-btn" type="button" data-movie="beatrix-is-invisible">Beatrix Is Invisible</button>
+            <button class="movie-btn" type="button" data-movie="bienvenidos-a-los-angeles">Bienvenidos a Los Angeles</button>
+            <button class="movie-btn" type="button" data-movie="i-cant-keep-quiet">I Can't Keep Quiet</button>
+            <button class="movie-btn" type="button" data-movie="it-turns-blue">It Turns Blue</button>
+            <button class="movie-btn" type="button" data-movie="jane-austens-period-drama">Jane Austen's Period Drama</button>
+            <button class="movie-btn" type="button" data-movie="meatball">Meatball</button>
+          </div>
+          <div class="pastsel__panels">
+        <div class="movie-panel" data-movie="beatrix-is-invisible" hidden>
+          <img class="movie-poster" src="assets/beatrix-is-invisible-poster.jpg?v=340" alt="Beatrix is Invisible poster">
+          <div class="movie-text">
+            <h3 class="movie-title">Beatrix is Invisible</h3>
+            <p class="movie-meta">Runtime: 17 min | Country: USA | Genre: Short drama</p>
+            <p class="movie-synopsis">When Beatrix finds herself feeling disconnected and insignificant, she is called to step far out of her comfort zone to sense her place in the world again.</p>
+            <p class="movie-directed">Directed by Alex Farias</p>
+          </div>
+        </div>
+        <div class="movie-panel" data-movie="bienvenidos-a-los-angeles" hidden>
+          <img class="movie-poster" src="assets/bienvenidos-a-los-angeles-poster.webp?v=340" alt="Bienvenidos a Los Angeles poster">
+          <div class="movie-text">
+            <h3 class="movie-title">Bienvenidos a Los Angeles</h3>
+            <p class="movie-meta">Runtime: 17 min | Country: USA | Genre: Short drama</p>
+            <p class="movie-synopsis">Inspired by true events, a Nigerian single mother living in Los Angeles offers to help a perfect stranger reunite with her son &mdash; only to discover that this simple act of kindness threatens to jeopardize her own path to citizenship.</p>
+            <p class="movie-directed">Directed by Lisa Cole</p>
+          </div>
+        </div>
+        <div class="movie-panel" data-movie="i-cant-keep-quiet" hidden>
+          <img class="movie-poster" src="assets/i-cant-keep-quiet-poster.webp?v=340" alt="I Can't Keep Quiet poster">
+          <div class="movie-text">
+            <h3 class="movie-title">I Can't Keep Quiet</h3>
+            <p class="movie-meta">Runtime: ~30 min | Country: USA | Genre: Short documentary</p>
+            <p class="movie-synopsis">Five years after her song &ldquo;Quiet&rdquo; became a global anthem for the women&rsquo;s movement, singer-songwriter MILCK reckons with her blindspots and embarks on a journey of reclamation alongside her co-creator.</p>
+            <p class="movie-directed">Directed by Eurie Chung</p>
+          </div>
+        </div>
+        <div class="movie-panel" data-movie="it-turns-blue" hidden>
+          <img class="movie-poster" src="assets/it-turns-blue-poster.webp?v=340" alt="It Turns Blue poster">
+          <div class="movie-text">
+            <h3 class="movie-title">It Turns Blue</h3>
+            <p class="movie-meta">Runtime: 15 min | Country: Iran / Greece | Genre: Short drama</p>
+            <p class="movie-synopsis">When a woman tries to cover up that her brother has beaten his 3-year-old daughter, her plan to make the little girl believe it was all a game seems to work &mdash; until the truth proves impossible to hide.</p>
+            <p class="movie-directed">Directed by Shadi Karamroudi</p>
+          </div>
+        </div>
+        <div class="movie-panel" data-movie="jane-austens-period-drama" hidden>
+          <img class="movie-poster" src="assets/jane-austens-period-drama-poster.webp?v=340" alt="Jane Austen's Period Drama poster">
+          <div class="movie-text">
+            <h3 class="movie-title">Jane Austen's Period Drama</h3>
+            <p class="movie-meta">Runtime: 13 min | Country: USA | Genre: Short comedy</p>
+            <p class="movie-synopsis">In 1813 England, a marriage proposal goes awry when Miss Estrogenia Talbot gets her period and her suitor mistakes the blood for a serious injury &mdash; revealing just how much his expensive education missed.</p>
+            <p class="movie-directed">Directed by Julia Aks &amp; Steve Pinder</p>
+          </div>
+        </div>
+        <div class="movie-panel" data-movie="meatball" hidden>
+          <img class="movie-poster" src="assets/meatball-poster.webp?v=340" alt="Meatball poster">
+          <div class="movie-text">
+            <h3 class="movie-title">Meatball</h3>
+            <p class="movie-meta">Runtime: 12 min | Country: USA | Genre: Short comedy-drama</p>
+            <p class="movie-synopsis">Cece comes out to her traditional Italian-American family during Sunday dinner.</p>
+            <p class="movie-directed">Directed by Alexandra Robinson</p>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section nmf-photos">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow"><span class="dot"></span>Festival Photos</span>
+    </div>
+    <div class="dl-group dl-group--static" data-reveal>
+      <h2 class="dl-group__title">Select a Year to See Photos from that Festival</h2>
+      <div class="dl-group__body">
+        <div class="yearpick yearpick--toggle">
+          <div class="yearpick__btns" role="group" aria-label="New Moon Fest photos by year">
+          <button type="button" class="year-btn" data-year="2024" aria-pressed="false">2024</button>
+          <button type="button" class="year-btn" data-year="2025" aria-pressed="false">2025</button>
+          <button type="button" class="year-btn" data-year="2026" aria-pressed="false">2026</button>
+          </div>
+          <div class="yearpick__panels">
+          <div class="year-panel" data-year="2024" hidden>
+            <p class="photo-credit">Photos by Charity Grace Photography. For prints, <a href="https://www.charitygracephotography.com/" target="_blank" rel="noopener">click here</a>.</p>
+            <div class="photo-grid">
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-01-lg.webp?v=340">
+                <img src="assets/nmf2024-01.webp?v=340" alt="Two guests with drinks in the clubhouse" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-02-lg.webp?v=340">
+                <img src="assets/nmf2024-02.webp?v=340" alt="Two bartenders pouring a glass of wine" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-03-lg.webp?v=340">
+                <img src="assets/nmf2024-03.webp?v=340" alt="Three guests together wearing festival lanyards" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-04-lg.webp?v=340">
+                <img src="assets/nmf2024-04.webp?v=340" alt="Two guests beside the bar" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-05-lg.webp?v=340">
+                <img src="assets/nmf2024-05.webp?v=340" alt="Two members of the bar team outdoors, one holding a glass to the light" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-06-lg.webp?v=340">
+                <img src="assets/nmf2024-06.webp?v=340" alt="Two hosts at the tequila soda table beside the tennis courts" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-07-lg.webp?v=340">
+                <img src="assets/nmf2024-07.webp?v=340" alt="A tray of papaya salad spoons passed to a guest" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-08-lg.webp?v=340">
+                <img src="assets/nmf2024-08.webp?v=340" alt="A platter of dumplings carried through the hall" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-09-lg.webp?v=340">
+                <img src="assets/nmf2024-09.webp?v=340" alt="Guests checking in at the registration desk" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-10-lg.webp?v=340">
+                <img src="assets/nmf2024-10.webp?v=340" alt="Four guests talking around a cocktail table" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-11-lg.webp?v=340">
+                <img src="assets/nmf2024-11.webp?v=340" alt="Two guests at a table beside the Instagram sign" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-12-lg.webp?v=340">
+                <img src="assets/nmf2024-12.webp?v=340" alt="Two guests in the hall before the screen" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-13-lg.webp?v=340">
+                <img src="assets/nmf2024-13.webp?v=340" alt="Two guests with glasses of wine under the Siasconset Casino sign" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-14-lg.webp?v=340">
+                <img src="assets/nmf2024-14.webp?v=340" alt="Three guests talking outside in the late afternoon" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-15-lg.webp?v=340">
+                <img src="assets/nmf2024-15.webp?v=340" alt="Four guests together on the deck, one wearing a volunteer badge" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-16-lg.webp?v=340">
+                <img src="assets/nmf2024-16.webp?v=340" alt="Guests gathered at the raw bar beside the tennis courts" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-17-lg.webp?v=340">
+                <img src="assets/nmf2024-17.webp?v=340" alt="The raw bar laid with oysters, clams and lemon on seaweed" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-18-lg.webp?v=340">
+                <img src="assets/nmf2024-18.webp?v=340" alt="Two guests with plates and drinks outdoors" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-19-lg.webp?v=340">
+                <img src="assets/nmf2024-19.webp?v=340" alt="Three guests around a flower-topped table by the courts" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-20-lg.webp?v=340">
+                <img src="assets/nmf2024-20.webp?v=340" alt="A guest in a star-print dress in conversation" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-21-lg.webp?v=340">
+                <img src="assets/nmf2024-21.webp?v=340" alt="A guest laughing beneath the Siasconset Casino sign" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-22-lg.webp?v=340">
+                <img src="assets/nmf2024-22.webp?v=340" alt="A guest glancing back over her shoulder in the lit hall" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-23-lg.webp?v=340">
+                <img src="assets/nmf2024-23.webp?v=340" alt="The hall filling with guests before the screening" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-24-lg.webp?v=340">
+                <img src="assets/nmf2024-24.webp?v=340" alt="Two guests together beneath the Casino sign" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-25-lg.webp?v=340">
+                <img src="assets/nmf2024-25.webp?v=340" alt="Three guests seated watching the programme" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-26-lg.webp?v=340">
+                <img src="assets/nmf2024-26.webp?v=340" alt="Two guests on the porch with a glass of wine" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-27-lg.webp?v=340">
+                <img src="assets/nmf2024-27.webp?v=340" alt="Guests browsing the silent auction beside a whale photograph" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-28-lg.webp?v=340">
+                <img src="assets/nmf2024-28.webp?v=340" alt="Three guests beside the silent auction tables" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-29-lg.webp?v=340">
+                <img src="assets/nmf2024-29.webp?v=340" alt="Three guests with glasses of wine at the bar" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-30-lg.webp?v=340">
+                <img src="assets/nmf2024-30.webp?v=340" alt="Two guests with drinks, one holding a raffle ticket" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-31-lg.webp?v=340">
+                <img src="assets/nmf2024-31.webp?v=340" alt="Two guests embracing in greeting" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-32-lg.webp?v=340">
+                <img src="assets/nmf2024-32.webp?v=340" alt="The Siasconset Casino full for the festival, lights strung overhead" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-33-lg.webp?v=340">
+                <img src="assets/nmf2024-33.webp?v=340" alt="The hall seen from the balcony, the red carpet running down the center" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-34-lg.webp?v=340">
+                <img src="assets/nmf2024-34.webp?v=340" alt="A host at the lectern beside the New Moon Fest logo on screen" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-35-lg.webp?v=340">
+                <img src="assets/nmf2024-35.webp?v=340" alt="The audience applauding, one guest raising a glass" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-36-lg.webp?v=340">
+                <img src="assets/nmf2024-36.webp?v=340" alt="Guests applauding during the programme" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-37-lg.webp?v=340">
+                <img src="assets/nmf2024-37.webp?v=340" alt="A speaker at the lectern before the wall of sponsor logos" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-38-lg.webp?v=340">
+                <img src="assets/nmf2024-38.webp?v=340" alt="The audience watching, one guest filming on a phone" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-39-lg.webp?v=340">
+                <img src="assets/nmf2024-39.webp?v=340" alt="A speaker in the spotlight at the lectern" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-40-lg.webp?v=340">
+                <img src="assets/nmf2024-40.webp?v=340" alt="A speaker addressing the seated audience across the hall" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-41-lg.webp?v=340">
+                <img src="assets/nmf2024-41.webp?v=340" alt="Two guests laughing together in the audience" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-42-lg.webp?v=340">
+                <img src="assets/nmf2024-42.webp?v=340" alt="The audience applauding, seated at linen-covered tables" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-43-lg.webp?v=340">
+                <img src="assets/nmf2024-43.webp?v=340" alt="A speaker at the lectern seen past the flowers at the stage edge" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-44-lg.webp?v=340">
+                <img src="assets/nmf2024-44.webp?v=340" alt="Rows of guests applauding, backlit by the windows" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-45-lg.webp?v=340">
+                <img src="assets/nmf2024-45.webp?v=340" alt="Guests applauding beneath the Casino sign" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-46-lg.webp?v=340">
+                <img src="assets/nmf2024-46.webp?v=340" alt="Guests applauding during the awards" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-47-lg.webp?v=340">
+                <img src="assets/nmf2024-47.webp?v=340" alt="Two guests seated together in the audience" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-48-lg.webp?v=340">
+                <img src="assets/nmf2024-48.webp?v=340" alt="Two volunteers at the check-in desk with laptops" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-49-lg.webp?v=340">
+                <img src="assets/nmf2024-49.webp?v=340" alt="Two guests laughing together, one holding a glass of wine" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-50-lg.webp?v=340">
+                <img src="assets/nmf2024-50.webp?v=340" alt="Guests seated with popcorn as the programme begins" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-51-lg.webp?v=340">
+                <img src="assets/nmf2024-51.webp?v=340" alt="Guests watching from the back of the hall, backlit by the windows" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-52-lg.webp?v=340">
+                <img src="assets/nmf2024-52.webp?v=340" alt="Two guests together beside a table of flowers" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-53-lg.webp?v=340">
+                <img src="assets/nmf2024-53.webp?v=340" alt="The hall full for the screening, the red carpet down the center" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-54-lg.webp?v=340">
+                <img src="assets/nmf2024-54.webp?v=340" alt="A host in the spotlight with a microphone" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-55-lg.webp?v=340">
+                <img src="assets/nmf2024-55.webp?v=340" alt="A host gesturing to the audience from the spotlight" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-56-lg.webp?v=340">
+                <img src="assets/nmf2024-56.webp?v=340" alt="A host smiling mid-sentence in the spotlight" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2024-57-lg.webp?v=340">
+                <img src="assets/nmf2024-57.webp?v=340" alt="A speaker at the lectern before the wall of sponsor logos" width="700" height="467" loading="lazy">
+              </button>
+            </div>
+          </div>
+          <div class="year-panel" data-year="2025" hidden>
+            <p class="photo-credit">Photos by Charity Grace Photography. For prints, <a href="https://www.charitygracephotography.com/" target="_blank" rel="noopener">click here</a>.</p>
+            <div class="photo-grid">
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-01-lg.webp?v=340">
+                <img src="assets/nmf2025-01.webp?v=340" alt="The audience seated along the red carpet as a film plays" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-02-lg.webp?v=340">
+                <img src="assets/nmf2025-02.webp?v=340" alt="The audience watching a portrait on the big screen" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-04-lg.webp?v=340">
+                <img src="assets/nmf2025-04.webp?v=340" alt="The audience applauding during the programme" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-06-lg.webp?v=340">
+                <img src="assets/nmf2025-06.webp?v=340" alt="A speaker at the lectern, the hall in darkness" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-07-lg.webp?v=340">
+                <img src="assets/nmf2025-07.webp?v=340" alt="A speaker addressing the festival from the lectern" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-08-lg.webp?v=340">
+                <img src="assets/nmf2025-08.webp?v=340" alt="The audience in profile, backlit by the windows" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-09-lg.webp?v=340">
+                <img src="assets/nmf2025-09.webp?v=340" alt="Two people embracing on stage" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-10-lg.webp?v=340">
+                <img src="assets/nmf2025-10.webp?v=340" alt="A speaker smiling at the lectern" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-11-lg.webp?v=340">
+                <img src="assets/nmf2025-11.webp?v=340" alt="A speaker at the lectern against the dark curtain" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-13-lg.webp?v=340">
+                <img src="assets/nmf2025-13.webp?v=340" alt="A festival-goer reading the programme" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-14-lg.webp?v=340">
+                <img src="assets/nmf2025-14.webp?v=340" alt="A speaker at the microphone" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-17-lg.webp?v=340">
+                <img src="assets/nmf2025-17.webp?v=340" alt="A speaker holding the microphone" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-19-lg.webp?v=340">
+                <img src="assets/nmf2025-19.webp?v=340" alt="A host seated at the edge of the stage with a microphone" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-24-lg.webp?v=340">
+                <img src="assets/nmf2025-24.webp?v=340" alt="A musician striking a crystal singing bowl beside the screen" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-27-lg.webp?v=340">
+                <img src="assets/nmf2025-27.webp?v=340" alt="A musician playing the bowls while a speaker appears on screen" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-28-lg.webp?v=340">
+                <img src="assets/nmf2025-28.webp?v=340" alt="The audience with hands raised toward the screen" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-30-lg.webp?v=340">
+                <img src="assets/nmf2025-30.webp?v=340" alt="A row of festival-goers watching the screen" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-31-lg.webp?v=340">
+                <img src="assets/nmf2025-31.webp?v=340" alt="The audience in profile during the programme" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-32-lg.webp?v=340">
+                <img src="assets/nmf2025-32.webp?v=340" alt="The hall seated along the candlelit red carpet as a film plays" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-33-lg.webp?v=340">
+                <img src="assets/nmf2025-33.webp?v=340" alt="Two festival-goers looking through the programme together" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-34-lg.webp?v=340">
+                <img src="assets/nmf2025-34.webp?v=340" alt="The audience applauding, a reserved seat marked in the row" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-35-lg.webp?v=340">
+                <img src="assets/nmf2025-35.webp?v=340" alt="The balcony view of the hall during a screening" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-40-lg.webp?v=340">
+                <img src="assets/nmf2025-40.webp?v=340" alt="Two guests together under the string lights" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-41-lg.webp?v=340">
+                <img src="assets/nmf2025-41.webp?v=340" alt="Two guests at the New Moon Fest step-and-repeat" width="700" height="560" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-42-lg.webp?v=340">
+                <img src="assets/nmf2025-42.webp?v=340" alt="Three guests flexing for the camera at the backdrop" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-44-lg.webp?v=340">
+                <img src="assets/nmf2025-44.webp?v=340" alt="Two guests holding programmes under the tent lights" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-45-lg.webp?v=340">
+                <img src="assets/nmf2025-45.webp?v=340" alt="The hall filling along the red carpet before a screening" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-46-lg.webp?v=340">
+                <img src="assets/nmf2025-46.webp?v=340" alt="Three members of the bar team with a tray of cocktails" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-47-lg.webp?v=340">
+                <img src="assets/nmf2025-47.webp?v=340" alt="A guest being talked through the cocktail menu at the bar" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-48-lg.webp?v=340">
+                <img src="assets/nmf2025-48.webp?v=340" alt="Two guests together with drinks beside the seating" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-49-lg.webp?v=340">
+                <img src="assets/nmf2025-49.webp?v=340" alt="Guests raising their glasses in a toast" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-50-lg.webp?v=340">
+                <img src="assets/nmf2025-50.webp?v=340" alt="A tray of lemonade cocktails garnished with dried citrus" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-51-lg.webp?v=340">
+                <img src="assets/nmf2025-51.webp?v=340" alt="Guests toasting together under the marquee" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-53-lg.webp?v=340">
+                <img src="assets/nmf2025-53.webp?v=340" alt="Three guests together at the reception" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-54-lg.webp?v=340">
+                <img src="assets/nmf2025-54.webp?v=340" alt="The hall with reserved seats laid out before the doors open" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-58-lg.webp?v=340">
+                <img src="assets/nmf2025-58.webp?v=340" alt="The audience watching a film along the candlelit red carpet" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-59-lg.webp?v=340">
+                <img src="assets/nmf2025-59.webp?v=340" alt="A host gesturing to the audience before the selection backdrop" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-60-lg.webp?v=340">
+                <img src="assets/nmf2025-60.webp?v=340" alt="Two festival-goers in matching quilted denim jackets" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-61-lg.webp?v=340">
+                <img src="assets/nmf2025-61.webp?v=340" alt="A server offering lemonade cocktails to a guest" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-62-lg.webp?v=340">
+                <img src="assets/nmf2025-62.webp?v=340" alt="Three guests posing at the New Moon Fest backdrop" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-63-lg.webp?v=340">
+                <img src="assets/nmf2025-63.webp?v=340" alt="Two guests cheek to cheek under the marquee" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-64-lg.webp?v=340">
+                <img src="assets/nmf2025-64.webp?v=340" alt="Two musicians playing guitar on the deck" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-65-lg.webp?v=340">
+                <img src="assets/nmf2025-65.webp?v=340" alt="An ambulance parked outside the Siasconset Casino at sunset" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-66-lg.webp?v=340">
+                <img src="assets/nmf2025-66.webp?v=340" alt="Three guests flexing at the New Moon Fest backdrop" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-67-lg.webp?v=340">
+                <img src="assets/nmf2025-67.webp?v=340" alt="Guests browsing the silent auction table" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-68-lg.webp?v=340">
+                <img src="assets/nmf2025-68.webp?v=340" alt="Two guests posing together at the backdrop" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-69-lg.webp?v=340">
+                <img src="assets/nmf2025-69.webp?v=340" alt="The silent auction table with its scan-here sign" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-70-lg.webp?v=340">
+                <img src="assets/nmf2025-70.webp?v=340" alt="Two members of the bar team setting up" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-71-lg.webp?v=340">
+                <img src="assets/nmf2025-71.webp?v=340" alt="Two bartenders sharing a laugh behind the bar" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-72-lg.webp?v=340">
+                <img src="assets/nmf2025-72.webp?v=340" alt="A server carrying two trays of cocktails" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-73-lg.webp?v=340">
+                <img src="assets/nmf2025-73.webp?v=340" alt="The audience watching in profile, backlit by the windows" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-74-lg.webp?v=340">
+                <img src="assets/nmf2025-74.webp?v=340" alt="The grazing table laid with fruit, cheese and charcuterie" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2025-75-lg.webp?v=340">
+                <img src="assets/nmf2025-75.webp?v=340" alt="The grazing table with its menu card and flowers" width="700" height="467" loading="lazy">
+              </button>
+            </div>
+          </div>
+          <div class="year-panel" data-year="2026" hidden>
+            <p class="photo-credit">Photos by Pixel Perfect. For prints, <a href="https://pixelperfectnantucket.zenfolio.com/" target="_blank" rel="noopener">click here</a>.</p>
+            <div class="photo-grid">
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-01-lg.webp?v=340">
+                <img src="assets/nmf2026-01.webp?v=340" alt="The Siasconset Casino set for the festival, performers on the lit stage" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-02-lg.webp?v=340">
+                <img src="assets/nmf2026-02.webp?v=340" alt="Two Nantucket police officers at the festival" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-03-lg.webp?v=340">
+                <img src="assets/nmf2026-03.webp?v=340" alt="A spring flower arrangement on a table outdoors" width="700" height="1049" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-04-lg.webp?v=340">
+                <img src="assets/nmf2026-04.webp?v=340" alt="A florist carrying a tall vase of lilacs" width="700" height="1049" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-05-lg.webp?v=340">
+                <img src="assets/nmf2026-05.webp?v=340" alt="An arrangement of tulips and bluebells on a garden table" width="700" height="1057" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-06-lg.webp?v=340">
+                <img src="assets/nmf2026-06.webp?v=340" alt="The buffet table with chafing dishes and warm flatbread" width="700" height="1049" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-07-lg.webp?v=340">
+                <img src="assets/nmf2026-07.webp?v=340" alt="Two caterers grilling skewers of shrimp and beef" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-08-lg.webp?v=340">
+                <img src="assets/nmf2026-08.webp?v=340" alt="A tall lilac arrangement in a painted vase beside the buffet" width="700" height="1049" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-09-lg.webp?v=340">
+                <img src="assets/nmf2026-09.webp?v=340" alt="A tiered display of sliced fruit" width="700" height="1049" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-10-lg.webp?v=340">
+                <img src="assets/nmf2026-10.webp?v=340" alt="Two guests wrapped in blankets on a cool evening" width="700" height="454" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-11-lg.webp?v=340">
+                <img src="assets/nmf2026-11.webp?v=340" alt="A server carrying a tray of cocktails" width="700" height="1049" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-12-lg.webp?v=340">
+                <img src="assets/nmf2026-12.webp?v=340" alt="A server with a tray of cocktails garnished with cherries" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-13-lg.webp?v=340">
+                <img src="assets/nmf2026-13.webp?v=340" alt="Two bartenders behind the bar" width="700" height="454" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-14-lg.webp?v=340">
+                <img src="assets/nmf2026-14.webp?v=340" alt="Two guests at the New Moon Fest backdrop" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-15-lg.webp?v=340">
+                <img src="assets/nmf2026-15.webp?v=340" alt="A guest at a table with a glass of wine" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-16-lg.webp?v=340">
+                <img src="assets/nmf2026-16.webp?v=340" alt="Two bartenders at the outdoor bar" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-17-lg.webp?v=340">
+                <img src="assets/nmf2026-17.webp?v=340" alt="Two guests in the theater before the screening" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-18-lg.webp?v=340">
+                <img src="assets/nmf2026-18.webp?v=340" alt="Two guests together in the theater" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-19-lg.webp?v=340">
+                <img src="assets/nmf2026-19.webp?v=340" alt="Four guests together at the festival" width="700" height="479" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-20-lg.webp?v=340">
+                <img src="assets/nmf2026-20.webp?v=340" alt="Two guests together in the theater" width="700" height="448" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-21-lg.webp?v=340">
+                <img src="assets/nmf2026-21.webp?v=340" alt="Two guests with drinks beside the silent auction table" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-22-lg.webp?v=340">
+                <img src="assets/nmf2026-22.webp?v=340" alt="Four guests at the New Moon Fest backdrop" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-23-lg.webp?v=340">
+                <img src="assets/nmf2026-23.webp?v=340" alt="Four guests raising their glasses at the backdrop" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-24-lg.webp?v=340">
+                <img src="assets/nmf2026-24.webp?v=340" alt="Two guests together at the backdrop" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-25-lg.webp?v=340">
+                <img src="assets/nmf2026-25.webp?v=340" alt="Three guests on the tennis court" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-26-lg.webp?v=340">
+                <img src="assets/nmf2026-26.webp?v=340" alt="Three guests at the New Moon Fest backdrop" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-27-lg.webp?v=340">
+                <img src="assets/nmf2026-27.webp?v=340" alt="Six guests lined up at the backdrop" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-28-lg.webp?v=340">
+                <img src="assets/nmf2026-28.webp?v=340" alt="Six guests laughing with their arms raised at the backdrop" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-30-lg.webp?v=340">
+                <img src="assets/nmf2026-30.webp?v=340" alt="Two guests seated together outdoors" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-31-lg.webp?v=340">
+                <img src="assets/nmf2026-31.webp?v=340" alt="Four guests with drinks beside the court" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-32-lg.webp?v=340">
+                <img src="assets/nmf2026-32.webp?v=340" alt="Two guests with glasses of wine" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-33-lg.webp?v=340">
+                <img src="assets/nmf2026-33.webp?v=340" alt="Two guests outside the clubhouse" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-34-lg.webp?v=340">
+                <img src="assets/nmf2026-34.webp?v=340" alt="Two guests together outside the clubhouse" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-35-lg.webp?v=340">
+                <img src="assets/nmf2026-35.webp?v=340" alt="Two guests on the deck with drinks" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-36-lg.webp?v=340">
+                <img src="assets/nmf2026-36.webp?v=340" alt="Two guests with glasses of wine outdoors" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-37-lg.webp?v=340">
+                <img src="assets/nmf2026-37.webp?v=340" alt="Three guests together beside the court" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-38-lg.webp?v=340">
+                <img src="assets/nmf2026-38.webp?v=340" alt="Two guests seated against the shingled wall" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-39-lg.webp?v=340">
+                <img src="assets/nmf2026-39.webp?v=340" alt="Two guests with drinks at the festival" width="700" height="989" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-40-lg.webp?v=340">
+                <img src="assets/nmf2026-40.webp?v=340" alt="Two guests with drinks outside the clubhouse" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-41-lg.webp?v=340">
+                <img src="assets/nmf2026-41.webp?v=340" alt="Two guests seated together against the shingled wall" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-42-lg.webp?v=340">
+                <img src="assets/nmf2026-42.webp?v=340" alt="Two guests beside the tennis court" width="700" height="455" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-43-lg.webp?v=340">
+                <img src="assets/nmf2026-43.webp?v=340" alt="Two guests seated by the court, one with a plate of food" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-44-lg.webp?v=340">
+                <img src="assets/nmf2026-44.webp?v=340" alt="Two guests laughing together on the deck" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-45-lg.webp?v=340">
+                <img src="assets/nmf2026-45.webp?v=340" alt="Two guests sharing a laugh beside the bar" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-47-lg.webp?v=340">
+                <img src="assets/nmf2026-47.webp?v=340" alt="Two guests arm in arm in the hall, one with a camera" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-48-lg.webp?v=340">
+                <img src="assets/nmf2026-48.webp?v=340" alt="Two guests in the hall, one holding a programme" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-49-lg.webp?v=340">
+                <img src="assets/nmf2026-49.webp?v=340" alt="Two guests seated together before the screening" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-50-lg.webp?v=340">
+                <img src="assets/nmf2026-50.webp?v=340" alt="The audience seated along the red carpet as a film plays" width="700" height="467" loading="lazy">
+              </button>
+              <button type="button" class="photo-grid__item" data-full="assets/nmf2026-51-lg.webp?v=340">
+                <img src="assets/nmf2026-51.webp?v=340" alt="The Siasconset Casino full for the screening, lights strung overhead" width="700" height="467" loading="lazy">
+              </button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section nmf-history">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow"><span class="dot"></span>The History of New Moon Fest</span>
+    </div>
+    <details class="pastsel__year dl-group nmf-sub" data-reveal>
+      <summary>Click here to learn more</summary>
+      <div class="dl-group__body">
+        <p class="dl-empty">The history of the New Moon Fest is coming soon.</p>
+      </div>
+    </details>
+  </div>
+</section>
+<section class="section nmf-featured">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow"><span class="dot"></span>Featured Videos</span>
+    </div>
+    <article class="watch-episode" data-reveal>
+      <div class="watch-episode__thumb">
+        <img src="https://img.youtube.com/vi/8H5-0YZWyN8/maxresdefault.jpg" alt="More than Cookies" loading="lazy">
+      </div>
+      <div class="watch-episode__text">
+        <h3 class="watch-episode__title">More than Cookies</h3>
+        <p class="watch-episode__desc">This video premiered at the 2026 New Moon Fest. It spotlights the girls behind the Nantucket Girl Scouts troop.</p>
+        <a class="watch-episode__link" href="https://youtu.be/8H5-0YZWyN8" target="_blank" rel="noopener">Click Here to Watch</a>
+      </div>
+    </article>
+    <article class="watch-episode" data-reveal>
+      <div class="watch-episode__thumb">
+        <img src="https://img.youtube.com/vi/CWHZPs2DYXA/maxresdefault.jpg" alt="Show Us What You Got" loading="lazy">
+      </div>
+      <div class="watch-episode__text">
+        <h3 class="watch-episode__title">Show Us What You Got</h3>
+        <p class="watch-episode__desc">This video premiered at the 2025 New Moon Fest. It features women from around Nantucket sharing what makes them feel strong.</p>
+        <a class="watch-episode__link" href="https://youtu.be/CWHZPs2DYXA" target="_blank" rel="noopener">Click Here to Watch</a>
+      </div>
+    </article>
+  </div>
+</section>
+<section class="section nmf-sponsors2026">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow"><span class="dot"></span>2026 Sponsors</span>
+      <h2>With Gratitude to the Sponsors Who Power this Movement</h2>
+    </div>
+    <div class="sponsor-map sponsor-flyer" data-reveal>
+      <img src="assets/2026-nmf-sponsor-flyer.webp?v=340" alt="2026 New Moon Fest sponsors">
+      <a class="sponsor-map__box" href="https://www.lemonpressnantucket.com/" target="_blank" rel="noopener" aria-label="Lemon Press" style="left:18.35%;top:4.17%;width:15.44%;height:9.41%"></a>
+      <a class="sponsor-map__box" href="https://www.sconsetcasino.com/" target="_blank" rel="noopener" aria-label="Sconset Casino" style="left:39.37%;top:2.22%;width:18.73%;height:13.14%"></a>
+      <a class="sponsor-map__box" href="https://www.whiteelephantnantucket.com/" target="_blank" rel="noopener" aria-label="White Elephant Nantucket" style="left:61.14%;top:3.82%;width:26.33%;height:10.12%"></a>
+      <a class="sponsor-map__box" href="https://www.ack.net/" target="_blank" rel="noopener" aria-label="The Inquirer and Mirror" style="left:17.59%;top:17.67%;width:63.80%;height:6.04%"></a>
+      <a class="sponsor-map__box" href="https://nantucketcurrent.com/" target="_blank" rel="noopener" aria-label="Nantucket Current" style="left:23.16%;top:24.60%;width:17.22%;height:10.83%"></a>
+      <a class="sponsor-map__box" href="https://harborsideadv.com/" target="_blank" rel="noopener" aria-label="Harborside Advisors" style="left:44.68%;top:24.25%;width:13.42%;height:11.90%"></a>
+      <a class="sponsor-map__box" href="https://handydallaireevents.com/" target="_blank" rel="noopener" aria-label="Handy &amp; Dallaire Events" style="left:62.15%;top:26.55%;width:26.84%;height:4.26%"></a>
+      <a class="sponsor-map__box" href="https://www.ciscobrewers.com/" target="_blank" rel="noopener" aria-label="Cisco Brewers" style="left:7.97%;top:25.49%;width:13.67%;height:9.77%"></a>
+      <a class="sponsor-map__box" href="https://nantucketrealestate.com/" target="_blank" rel="noopener" aria-label="Atlantic East Nantucket Real Estate" style="left:66.71%;top:31.53%;width:29.11%;height:5.33%"></a>
+      <a class="sponsor-map__box" href="https://asafeplacenantucket.org/" target="_blank" rel="noopener" aria-label="A Safe Place" style="left:0.63%;top:40.05%;width:20.51%;height:2.66%"></a>
+      <a class="sponsor-map__box" href="https://littlesaints.com/" target="_blank" rel="noopener" aria-label="Little Saints" style="left:21.90%;top:38.45%;width:15.19%;height:6.22%"></a>
+      <a class="sponsor-map__box" href="https://nantucketwinefestival.com/" target="_blank" rel="noopener" aria-label="Nantucket Wine &amp; Food Festival" style="left:38.35%;top:39.52%;width:20.76%;height:4.97%"></a>
+      <a class="sponsor-map__box" href="https://nantucketwellnessfestival.com/" target="_blank" rel="noopener" aria-label="Nantucket Wellness Festival" style="left:61.14%;top:38.81%;width:19.75%;height:5.15%"></a>
+      <a class="sponsor-map__box" href="https://nantucketculturaldistrict.org/" target="_blank" rel="noopener" aria-label="Nantucket Cultural District" style="left:83.16%;top:37.92%;width:16.71%;height:6.39%"></a>
+      <a class="sponsor-map__box" href="https://www.ackartgallery.com/" target="_blank" rel="noopener" aria-label="a Sharpe Point" style="left:5.19%;top:45.38%;width:15.70%;height:10.48%"></a>
+      <a class="sponsor-map__box" href="https://bpc-architecture.com/" target="_blank" rel="noopener" aria-label="BPC Architecture" style="left:64.18%;top:47.51%;width:13.92%;height:6.75%"></a>
+      <a class="sponsor-map__box" href="https://ackgiftbags.com/" target="_blank" rel="noopener" aria-label="ACK Gift Bags &amp; Events" style="left:79.87%;top:46.27%;width:16.20%;height:9.41%"></a>
+      <a class="sponsor-map__box" href="https://donnaelle.com/" target="_blank" rel="noopener" aria-label="Donna Elle Design" style="left:23.67%;top:48.40%;width:18.48%;height:6.57%"></a>
+      <a class="sponsor-map__box" href="https://www.charitygracephotography.com/" target="_blank" rel="noopener" aria-label="Charity Grace Photography" style="left:44.68%;top:45.20%;width:15.44%;height:13.50%"></a>
+      <a class="sponsor-map__box" href="https://thecopperrosenantucket.com/" target="_blank" rel="noopener" aria-label="The Copper Rose" style="left:2.66%;top:59.24%;width:22.53%;height:7.10%"></a>
+      <a class="sponsor-map__box" href="https://daybreaknantucket.com/" target="_blank" rel="noopener" aria-label="DayBreak Nantucket" style="left:27.22%;top:61.72%;width:17.47%;height:4.80%"></a>
+      <a class="sponsor-map__box" href="https://nantucketdancetheater.org/" target="_blank" rel="noopener" aria-label="Nantucket Dance Theater" style="left:46.20%;top:60.12%;width:11.14%;height:7.99%"></a>
+      <a class="sponsor-map__box" href="https://bycasendra.massagetherapy.com/" target="_blank" rel="noopener" aria-label="byCasendra" style="left:59.11%;top:61.72%;width:26.58%;height:5.68%"></a>
+      <a class="sponsor-map__box" href="https://shorepointadvisorygroup.com/" target="_blank" rel="noopener" aria-label="ShorePoint Advisory Group" style="left:86.46%;top:63.14%;width:13.42%;height:2.66%"></a>
+      <a class="sponsor-map__box" href="https://www.bigelowadvisors.com/" target="_blank" rel="noopener" aria-label="Bigelow Investment Advisors" style="left:5.95%;top:69.36%;width:18.23%;height:3.73%"></a>
+      <a class="sponsor-map__box" href="https://florabundantnantucket.com/" target="_blank" rel="noopener" aria-label="Florabundant" style="left:24.94%;top:69.89%;width:22.03%;height:3.02%"></a>
+      <a class="sponsor-map__box" href="https://commonwealthnantucket.com/" target="_blank" rel="noopener" aria-label="Commonwealth" style="left:48.23%;top:69.01%;width:19.24%;height:3.91%"></a>
+      <a class="sponsor-map__box" href="https://monarchnantucket.com/" target="_blank" rel="noopener" aria-label="Monarch Face &amp; Body" style="left:68.99%;top:67.94%;width:10.38%;height:5.68%"></a>
+      <a class="sponsor-map__box" href="https://nalunantucket.com/" target="_blank" rel="noopener" aria-label="Nalu Nantucket" style="left:83.42%;top:67.94%;width:11.14%;height:5.51%"></a>
+      <a class="sponsor-map__box" href="https://www.nantucketlooms.com/" target="_blank" rel="noopener" aria-label="Nantucket Looms" style="left:1.65%;top:74.51%;width:11.39%;height:7.99%"></a>
+      <a class="sponsor-map__box" href="https://www.optimizehrllc.com/" target="_blank" rel="noopener" aria-label="Optimize HR" style="left:14.05%;top:76.29%;width:17.22%;height:3.73%"></a>
+      <a class="sponsor-map__box" href="https://thepalmsbookkeepingservices.com/" target="_blank" rel="noopener" aria-label="The Palms Bookkeeping" style="left:32.53%;top:75.58%;width:15.44%;height:5.33%"></a>
+      <a class="sponsor-map__box" href="https://pixelperfectnantucket.zenfolio.com/" target="_blank" rel="noopener" aria-label="Laurie Richards Pixel Perfect" style="left:51.01%;top:76.64%;width:16.71%;height:3.91%"></a>
+      <a class="sponsor-map__box" href="https://sheltairaviation.com/" target="_blank" rel="noopener" aria-label="Sheltair Aviation" style="left:68.73%;top:77.35%;width:15.70%;height:2.49%"></a>
+      <a class="sponsor-map__box" href="https://signherenantucket.com/" target="_blank" rel="noopener" aria-label="Sign Here Nantucket" style="left:85.19%;top:75.04%;width:11.14%;height:5.68%"></a>
+    </div>
+  </div>
+</section>
+
+<!-- footer (built by site.js) -->
+<footer id="site-footer"></footer>
+
+<script src="site.js?v=340"></script>
+</body>
+</html>
