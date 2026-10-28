@@ -1,0 +1,27 @@
+# What stays on this Mac and never goes to GitHub.
+#
+# Git keeps every version of every committed file permanently, so anything
+# listed here must be listed BEFORE the first commit. Removing a large file
+# afterwards means rewriting history, which is far more trouble.
+
+# Working backups. Each editing session leaves a dated copy of build.py,
+# styles.css, site.js or CLAUDE.md -- 46 files and 111 MB as of 2026-10-18.
+# Only the current version of each is committed.
+# Matches a literal ".bak" anywhere in the name, which covers both the
+# build.py.bak_desc8 and build.py.bak2025agendas spellings.
+*.bak*
+
+# Full-resolution originals. Kept so the WebP files in assets/ can be
+# regenerated at a different size later. Too large to publish, and the site
+# never loads them. image-originals/ normally sits outside this folder; it is
+# listed in case the repository is ever rooted a level higher.
+*-original.png
+image-originals/
+
+# Agenda PDFs cached by tools/agenda-tables.py. Downloaded from CivicClerk
+# on demand and re-fetched if missing, so there is nothing here to keep
+# -- 37 MB after one board-year.
+tools/.agenda-pdfs/
+
+# macOS folder metadata, created automatically by Finder.
+.DS_Store
