@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nantucket Community Television — Vision. Voice. Life.</title>
+<meta name="description" content="NCTV broadcasts island life on Channels 8 and 1072: Nantucket town board meetings, high school sports, school events, documentaries and two film festivals.">
+<link rel="canonical" href="https://www.ournctv.org/">
+<!-- Open Graph: what Facebook, Instagram, iMessage, WhatsApp and X show when
+     someone shares a link to this page. Without these a shared NCTV link
+     renders as a bare URL with no picture and no headline. X reads the Open
+     Graph tags too, so it needs only the card type. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nantucket Community Television">
+<meta property="og:title" content="Nantucket Community Television — Vision. Voice. Life.">
+<meta property="og:description" content="NCTV broadcasts island life on Channels 8 and 1072: Nantucket town board meetings, high school sports, school events, documentaries and two film festivals.">
+<meta property="og:url" content="https://www.ournctv.org/">
+<meta property="og:image" content="https://www.ournctv.org/assets/og-card.jpg?v=350">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Nantucket Community Television building at 9 Bayberry Court">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://player.vimeo.com">
+<link rel="preconnect" href="https://f.vimeocdn.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,560;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;650;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=350">
+</head>
+<body data-page="index.html">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- broadcast status strip -->
+<div class="status-strip">
+  <div class="wrap">
+    <span class="live">On Air</span>
+    <span class="sep">/</span>
+    <span>Nantucket, MA</span>
+    <span class="sep">/</span>
+    <span>TV Channels: Civic 8 &amp; HD 1072</span>
+    <span class="roll">Vision. Voice. Life.</span>
+  </div>
+</div>
+
+<header id="site-nav" class="nav">
+    <div class="wrap">
+      <a class="nav__brand" href="index.html" aria-label="Nantucket Community Television — home">
+        <img src="assets/NCTV_Full_Name.webp" alt="Nantucket Community TV — Civic + HD · Channels 8 | 1072">
+      </a>
+      <button class="nav__burger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__menu" aria-label="Primary">
+        <div class="nav__item">
+          <button class="nav__link" aria-haspopup="true" aria-expanded="false">
+            About<span class="chev" aria-hidden="true"></span>
+          </button>
+          <div class="nav__panel"><a href="about-staff.html">Staff &amp; Board</a><a href="about-hours-contact.html">Hours & Contact</a></div>
+        </div>
+        <div class="nav__item">
+          <button class="nav__link" aria-haspopup="true" aria-expanded="false">
+            Watch<span class="chev" aria-hidden="true"></span>
+          </button>
+          <div class="nav__panel"><a href="https://u.peg.tv/s/afezr0" target="_blank" rel="noopener">Live TV</a><a href="videos-civic.html">Nantucket Civic TV</a><a href="videos-nantucket-life.html">Nantucket Life</a><a href="videos-sports-connection.html">Nantucket Sports Connection</a><a href="videos-partner-programs.html">Nonprofit Videos</a><a href="videos-school.html">School Videos</a><a href="videos-past-shows.html">Past TV Shows</a></div>
+        </div>
+        <div class="nav__item">
+          <a class="nav__link" href="events-shorts-fest.html">Shorts Fest</a>
+        </div>
+        <div class="nav__item">
+          <a class="nav__link" href="events-new-moon-fest.html">New Moon Fest</a>
+        </div>
+        <div class="nav__item">
+          <a class="nav__link" href="create.html">Free Services</a>
+        </div>
+        <div class="nav__item">
+          <a class="nav__link" href="https://donate.stripe.com/7sYbJ0dFD8IVd7k9XQ0VO07" target="_blank" rel="noopener">Donate</a>
+        </div>
+      <form class="nav__search" role="search" action="search.html">
+        <input class="nav__search-input" type="search" name="q" placeholder="Search videos"
+               aria-label="Search videos" autocomplete="off" spellcheck="false">
+        <button class="nav__search-btn" type="submit" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor"
+               stroke-width="2.2" stroke-linecap="round">
+            <circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.6-3.6"></path>
+          </svg>
+        </button>
+      </form></nav>
+    </div></header>
+
+<main id="main" tabindex="-1">
+  <section class="hero">
+    <div class="hero__media">
+      <!-- Fallback photo: always shown behind the banner video. If the video
+           can't play (opened directly from a file, or any error), the visitor
+           sees this photo instead of an error box. -->
+      <img class="hero__fallback" src="assets/front-door.webp"
+           alt="Nantucket Community Television at 9 Bayberry Court, Nantucket"
+           fetchpriority="high">
+      <!-- The banner video is built INSIDE this box by the script further
+           down, as a plain <video>. Empty until that script runs. -->
+      <div class="hero__video" aria-hidden="true"></div>
+    </div>
+    <div class="hero__scrim"></div>
+    <div class="hero__inner wrap">
+      <h1 class="hero__wordmark"><span class="our">OUR</span><span class="nctv">nctv</span></h1>
+      <p class="hero__sub">NCTV engages Nantucket by connecting stories to audiences,
+        government to citizens, and students to hands-on learning.</p>
+      <div class="hero__watch">
+        <span class="hero__watch-label">Click to Watch:</span>
+        <a class="hero-chip" href="videos-civic.html" aria-label="Nantucket Civic TV">
+          <img src="assets/Nantucket_Civic_Television_Logo_4.webp?v=350" alt="Nantucket Civic Television"></a>
+        <a class="hero-chip" href="videos-nantucket-life.html" aria-label="Nantucket Life">
+          <img src="assets/nantucket-life.webp" alt="Nantucket Life"></a>
+        <a class="hero-chip" href="videos-sports-connection.html" aria-label="Nantucket Sports Connection">
+          <img src="assets/sports-connection.webp" alt="Nantucket Sports Connection"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       BANNER VIDEO
+       To change the banner video, upload it to Vimeo and point
+       BANNER_VIDEO (top of this script) at the new "<id>:<hash>".
+       Plays muted + looped; if it can't load, the photo above stays visible.
+       =================================================================== -->
+  <script>
+  (function(){
+    // Respect "reduce motion": skip the video entirely, keep the photo.
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion:reduce)").matches) return;
+
+    var wrap  = document.querySelector(".hero__video");
+    var media = document.querySelector(".hero__media");
+    if (!wrap) return;
+    function show(){ if (media) media.classList.add("is-playing"); }
+
+    // background=1 gives autoplay, muted, looped and a player with no
+    // controls. dnt=1 asks Vimeo not to track the visitor. The player
+    // letterboxes to fit its frame, so styles.css oversizes the iframe and
+    // lets the hero clip it -- the cover crop an iframe cannot do itself.
+    var f = document.createElement("iframe");
+    f.setAttribute("frameborder", "0");
+    f.setAttribute("tabindex", "-1");
+    f.allow = "autoplay";
+    f.src = "https://player.vimeo.com/video/1240222670?h=88fdd61d1d" +
+            "&background=1&autoplay=1&loop=1&muted=1&dnt=1";
+
+    // Hold the photo until the player reports real frames. This is Vimeo's
+    // own postMessage protocol, used directly so we need not fetch player.js
+    // (about 30 KB) for the sake of a single event.
+    //
+    // Subscribe when the player says "ready", NOT on the iframe's load event.
+    // Load fires first -- about 130ms against 160ms for ready -- and the
+    // player silently discards any method call that arrives before it is
+    // ready, so subscribing on load left this waiting for a "play" that never
+    // came, and the banner appeared on the backstop timer instead.
+    window.addEventListener("message", function(e){
+      if (!f.contentWindow || e.source !== f.contentWindow) return;
+      var d = e.data;
+      try { if (typeof d === "string") d = JSON.parse(d); } catch (err) { return; }
+      if (!d) return;
+      if (d.event === "ready") {
+        try {
+          f.contentWindow.postMessage(
+            JSON.stringify({ method: "addEventListener", value: "play" }),
+            "https://player.vimeo.com");
+        } catch (err) { /* the backstop below still reveals it */ }
+      } else if (d.event === "play" || d.event === "playing") {
+        show();
+      }
+    });
+    wrap.appendChild(f);
+
+    // Backstop only, for a player that never reports: show the video anyway.
+    setTimeout(show, 2000);
+  })();
+  </script>
+
+  <!-- featured video -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow"><span class="dot"></span>Featured Video</span>
+      </div>
+    <div class="videos">
+      <article class="video" data-reveal>
+        <div class="video__frame">
+          <iframe loading="lazy"
+            src="https://www.youtube-nocookie.com/embed/9BnRkR2W9Zc?rel=0"
+            title="NCTV Featured Video"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </article>
+    </div>
+      <p class="featured__desc" data-reveal>This promo explains how NCTV chose our
+        new web address &mdash; <a href="https://www.ournctv.org">www.OURnctv.org</a>.</p>
+    </div>
+  </section>
+
+  <!-- partner programs -->
+  <section class="section section--paper">
+    <div class="wrap">
+      <div class="channels-head">
+        <div class="section__head" data-reveal>
+          <span class="eyebrow"><span class="dot"></span>Partner Programs</span>
+          <h2>NCTV is a proud member of the Nantucket nonprofit family. Click below
+            to watch videos we produced for our partners.</h2>
+        </div>
+        <div class="channels-art-wrap" data-reveal data-reveal-d="2">
+          <img class="channels-art" src="assets/home-languages.webp" loading="lazy"
+               alt="The word &quot;home&quot; written in many languages across a map of Nantucket">
+        </div>
+      </div>
+      <div class="partners">
+        <a class="partner" href="partner-dreamland.html" aria-label="Dreamland" data-reveal data-reveal-d="1">
+          <img class="partner__logo" src="assets/partner-dreamland.webp?v=350" alt="Dreamland" loading="lazy">
+        </a>
+        <a class="partner" href="partner-linda-loring.html" aria-label="Linda Loring Nature Foundation" data-reveal data-reveal-d="2">
+          <img class="partner__logo" src="assets/partner-linda-loring.webp?v=350" alt="Linda Loring Nature Foundation" loading="lazy">
+        </a>
+        <a class="partner" href="partner-atheneum.html" aria-label="Nantucket Atheneum" data-reveal data-reveal-d="3">
+          <img class="partner__logo" src="assets/partner-atheneum.webp?v=350" alt="Nantucket Atheneum" loading="lazy">
+        </a>
+        <a class="partner" href="partner-book-fest.html" aria-label="Nantucket Book Festival" data-reveal data-reveal-d="4">
+          <img class="partner__logo" src="assets/partner-book-fest.webp?v=350" alt="Nantucket Book Festival" loading="lazy">
+        </a>
+        <a class="partner" href="partner-civic-league.html" aria-label="Nantucket Civic League" data-reveal data-reveal-d="1">
+          <img class="partner__logo" src="assets/partner-civic-league.webp?v=350" alt="Nantucket Civic League" loading="lazy">
+        </a>
+        <a class="partner" href="partner-conservation-foundation.html" aria-label="Nantucket Conservation Foundation" data-reveal data-reveal-d="2">
+          <img class="partner__logo" src="assets/partner-conservation-foundation.webp?v=350" alt="Nantucket Conservation Foundation" loading="lazy">
+        </a>
+        <a class="partner" href="partner-cottage-hospital.html" aria-label="Nantucket Cottage Hospital" data-reveal data-reveal-d="3">
+          <img class="partner__logo" src="assets/partner-cottage-hospital.webp?v=350" alt="Nantucket Cottage Hospital" loading="lazy">
+        </a>
+        <a class="partner" href="partner-film-festival.html" aria-label="Nantucket Film Festival" data-reveal data-reveal-d="4">
+          <img class="partner__logo" src="assets/partner-film-festival.webp?v=350" alt="Nantucket Film Festival" loading="lazy">
+        </a>
+        <a class="partner" href="partner-ngcf.html" aria-label="Nantucket Golf Club Foundation" data-reveal data-reveal-d="1">
+          <img class="partner__logo" src="assets/partner-ngcf.webp?v=350" alt="Nantucket Golf Club Foundation" loading="lazy">
+        </a>
+        <a class="partner" href="partner-nha.html" aria-label="Nantucket Historical Association" data-reveal data-reveal-d="2">
+          <img class="partner__logo" src="assets/partner-nha.webp?v=350" alt="Nantucket Historical Association" loading="lazy">
+        </a>
+        <a class="partner" href="partner-chamber-of-commerce.html" aria-label="Nantucket Island Chamber of Commerce" data-reveal data-reveal-d="3">
+          <img class="partner__logo" src="assets/partner-chamber-of-commerce.webp?v=350" alt="Nantucket Island Chamber of Commerce" loading="lazy">
+        </a>
+        <a class="partner" href="partner-land-water-council.html" aria-label="Nantucket Land &amp; Water Council" data-reveal data-reveal-d="4">
+          <img class="partner__logo" src="assets/Nantucket_Land___Water_Council.webp?v=350" alt="Nantucket Land &amp; Water Council" loading="lazy">
+        </a>
+        <a class="partner" href="partner-remain.html" aria-label="Remain Nantucket" data-reveal data-reveal-d="1">
+          <img class="partner__logo" src="assets/partner-remain.webp?v=350" alt="Remain Nantucket" loading="lazy">
+        </a>
+        <a class="partner" href="partner-rossini-club.html" aria-label="The Rossini Club" data-reveal data-reveal-d="2">
+          <img class="partner__logo" src="assets/partner-rossini-club.webp?v=350" alt="The Rossini Club" loading="lazy">
+        </a>
+        <a class="partner" href="partner-wpi.html" aria-label="Worcester Polytechnic Institute: Nantucket Project" data-reveal data-reveal-d="3">
+          <img class="partner__logo" src="assets/partner-wpi.webp?v=350" alt="Worcester Polytechnic Institute: Nantucket Project" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- what has NCTV been up to? (interactive month calendar) -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow"><span class="dot"></span>Around the island</span>
+        <div class="head-row">
+          <img class="head-seagull" src="assets/seagull-camera.webp" loading="lazy"
+               alt="Cartoon seagull filming with a TV camera on a tripod">
+          <h2>What has NCTV been up to this year?</h2>
+        </div>
+      </div>
+    <div class="calendar" id="nctvCalendar">
+      <div class="calendar__months">
+        <button type="button" class="calendar__month" data-month="January">January</button>
+        <button type="button" class="calendar__month" data-month="February">February</button>
+        <button type="button" class="calendar__month" data-month="March">March</button>
+        <button type="button" class="calendar__month" data-month="April">April</button>
+        <button type="button" class="calendar__month" data-month="May">May</button>
+        <button type="button" class="calendar__month" data-month="June">June</button>
+        <button type="button" class="calendar__month" data-month="July">July</button>
+        <button type="button" class="calendar__month" data-month="August">August</button>
+        <button type="button" class="calendar__month" data-month="September">September</button>
+        <button type="button" class="calendar__month" data-month="October">October</button>
+        <button type="button" class="calendar__month" data-month="November">November</button>
+        <button type="button" class="calendar__month" data-month="December">December</button>
+      </div>
+      <p class="calendar__hint" data-calendar-hint>Pick a month to see what we've been up to.</p>
+      <div class="calendar__grid" data-month="January" hidden>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+      </div>
+      <div class="calendar__grid" data-month="February" hidden>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+      </div>
+      <div class="calendar__grid" data-month="March" hidden>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+      </div>
+      <div class="calendar__grid" data-month="April" hidden>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+      </div>
+      <div class="calendar__grid" data-month="May" hidden>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+      </div>
+      <div class="calendar__grid" data-month="June" hidden>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+      </div>
+      <div class="calendar__grid" data-month="July" hidden>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+      </div>
+      <div class="calendar__grid" data-month="August" hidden>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+      </div>
+      <div class="calendar__grid" data-month="September" hidden>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+      </div>
+      <div class="calendar__grid" data-month="October" hidden>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+      </div>
+      <div class="calendar__grid" data-month="November" hidden>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+      </div>
+      <div class="calendar__grid" data-month="December" hidden>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- membership banner -->
+  <section class="section section--paper">
+    <div class="wrap">
+      <div class="appt" data-reveal>
+        <span class="eyebrow" style="color:var(--green)"><span class="dot"></span>Free for Nantucket</span>
+        <h3 style="font-size:clamp(1.8rem,4vw,2.6rem);margin-top:14px">Membership is free for every islander &amp; organization.</h3>
+        <p>Borrow gear, book studio time, and learn filmmaking, TV production and podcasting — at no cost.</p>
+        <a class="btn btn--green" href="create.html"><span class="play"></span>Become a member</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer" class="footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <p class="footer__addr">
+          Nantucket Community Television<br>
+          9 Bayberry Court<br>
+          Nantucket, MA 02554<br><br>
+          <a href="mailto:info@ournctv.org">info@ournctv.org</a><br>
+          <a href="tel:+15089015499">508-901-5499</a>
+          <span class="footer__social"><a href="https://www.facebook.com/ournctv" target="_blank" rel="noopener" aria-label="NCTV on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M15.1 8.2V6.6c0-.73.49-.9.83-.9h2.1V2.6l-2.9-.01c-3.2 0-3.93 2.39-3.93 3.92V8.2H9.3v3.25h1.9V21h3.9v-9.55h2.6l.34-3.25h-2.94z"/></svg></a><a href="https://www.instagram.com/ournctv/" target="_blank" rel="noopener" aria-label="NCTV on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor" stroke="none"/></svg></a></span>
+        </p>
+        <span class="footer__brand">
+          <img src="assets/nctv-logo-whitetext.webp" alt="NCTV — Nantucket Community Television">
+        </span>
+      </div>
+      <div class="footer__bar">
+        <span>© <span id="footer-year">2026</span> Nantucket Community Television</span>
+        <span>TV CHANNELS: CIVIC 8 &amp; HD 1072 · NANTUCKET, MA</span>
+      </div>
+    </div></footer>
+
+<script src="site.js?v=350"></script>
+</body>
+</html>
